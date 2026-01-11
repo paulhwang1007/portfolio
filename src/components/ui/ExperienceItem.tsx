@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { TechBadge } from "@/components/ui/TechBadge";
+
 interface ExperienceItemProps {
   logo: string;
   logoAlt: string;
@@ -11,6 +13,7 @@ interface ExperienceItemProps {
   startPeriod: string;
   endPeriod?: string; // Optional if "present" is part of start or merged
   location: string;
+  skills?: string[];
   children: React.ReactNode;
 }
 
@@ -21,6 +24,7 @@ export function ExperienceItem({
   company,
   startPeriod,
   location,
+  skills,
   children,
 }: ExperienceItemProps) {
   return (
@@ -73,6 +77,14 @@ export function ExperienceItem({
         }}
       >
         {children}
+        
+        {skills && skills.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-6">
+                {skills.map((skill, index) => (
+                    <TechBadge key={index} name={skill} />
+                ))}
+            </div>
+        )}
       </motion.div>
     </motion.div>
   );

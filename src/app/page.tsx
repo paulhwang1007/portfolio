@@ -93,6 +93,7 @@ export default function Home() {
                          company="Shop Online New York"
                          startPeriod="August 2025 - December 2025"
                          location="Remote - Yonkers, NY"
+                         skills={["React", "Javascript", "Tailwind CSS", "Git", "Github", "Jira", "Figma"]}
                        >
                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
@@ -111,6 +112,7 @@ export default function Home() {
                          company="Cornell University Sustainable Design"
                          startPeriod="January 2025 - present"
                          location="Ithaca, NY"
+                         skills={["HTML/CSS", "Javascript", "Figma"]}
                        >
                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
@@ -132,6 +134,7 @@ export default function Home() {
                          company="Pi Delta Psi Fraternity Inc."
                          startPeriod="October 2024 - present"
                          location="Ithaca, NY"
+                         skills={["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"]}
                        >
                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
@@ -156,6 +159,7 @@ export default function Home() {
                          company="Cornell University"
                          startPeriod="Aug 2023 - May 2027"
                          location="Ithaca, NY"
+                         skills={["Java", "Python", "Swift", "R", "HTML/CSS", "Javascript"]}
                        >
                         <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-2">
                           <span className="font-semibold text-white">Relevant Coursework:</span>
