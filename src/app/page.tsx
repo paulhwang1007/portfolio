@@ -87,8 +87,8 @@ export default function Home() {
                    content: (
                      <div>
                        <div className="mb-12">
-                          <div className="flex items-center gap-4 mb-6">
-                              <div className="relative h-12 w-12 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
+                          <div className="flex items-start gap-4 mb-6">
+                              <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
                                   <Image
                                       src="/images/shop-online-logo.png"
                                       alt="Shop Online New York"
@@ -98,26 +98,32 @@ export default function Home() {
                               </div>
                               <div>
                                   <h4 className="text-xl md:text-2xl font-bold text-white">
-                                      Software Engineer Intern | Shop Online New York
+                                      Software Engineer Intern
                                   </h4>
+                                  <p className="text-lg md:text-xl text-white">
+                                      Shop Online New York
+                                  </p>
                                   <p className="text-lg md:text-xl text-neutral-400">
-                                      August 2025 - December 2025 | Remote - Yonkers, NY
+                                      August 2025 - December 2025
+                                  </p>
+                                  <p className="text-lg md:text-xl text-neutral-400">
+                                      Remote - Yonkers, NY
                                   </p>
                               </div>
                           </div>
                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
-                             Developed reusable React components and integrated APIs through component-driven architecture to enforce UI consistency and seamless feature rollouts.
+                             Developed 15+ reusable React components and integrated APIs through component-driven architecture, reducing development time by 30% and enforcing UI consistency.
                            </li>
                            <li className="pl-1">
-                             Optimized application performance by refactoring legacy code, conducting code reviews, and applying React best practices for thousands of active users.
+                             Optimized application performance by refactoring legacy code and applying React best practices, improving load speed by 40% for thousands of active users.
                            </li>
                          </ul>
                        </div>
 
                        <div>
-                          <div className="flex items-center gap-4 mb-6">
-                              <div className="relative h-12 w-12 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
+                          <div className="flex items-start gap-4 mb-6">
+                              <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
                                   <Image
                                       src="/images/cusd-logo.png"
                                       alt="Cornell University Sustainable Design"
@@ -127,10 +133,16 @@ export default function Home() {
                               </div>
                               <div>
                                   <h4 className="text-xl md:text-2xl font-bold text-white">
-                                      Frontend Web Developer | Cornell University Sustainable Design
+                                      Frontend Web Developer
                                   </h4>
+                                  <p className="text-lg md:text-xl text-white">
+                                      Cornell University Sustainable Design
+                                  </p>
                                   <p className="text-lg md:text-xl text-neutral-400">
-                                      January 2025 - present | Ithaca, NY
+                                      January 2025 - present
+                                  </p>
+                                  <p className="text-lg md:text-xl text-neutral-400">
+                                      Ithaca, NY
                                   </p>
                               </div>
                           </div>
@@ -147,8 +159,8 @@ export default function Home() {
                    title: "2024",
                    content: (
                      <div>
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="relative h-12 w-12 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
                                 <Image
                                     src="/images/pideltapsi-logo.jpg"
                                     alt="Pi Delta Psi Incorporated"
@@ -158,10 +170,16 @@ export default function Home() {
                             </div>
                             <div>
                                 <h4 className="text-xl md:text-2xl font-bold text-white">
-                                    Frontend Web Developer | Pi Delta Psi Incorporated
+                                    Frontend Web Developer
                                 </h4>
+                                <p className="text-lg md:text-xl text-white">
+                                    Pi Delta Psi Fraternity Inc.
+                                </p>
                                 <p className="text-lg md:text-xl text-neutral-400">
-                                    October 2024 - present | Ithaca, NY
+                                    October 2024 - present
+                                </p>
+                                <p className="text-lg md:text-xl text-neutral-400">
+                                    Ithaca, NY
                                 </p>
                             </div>
                         </div>
@@ -171,6 +189,45 @@ export default function Home() {
                          </li>
                          <li className="pl-1">
                            Optimized site performance and SEO by implementing Next.js best practices for load speed, indexing, and scalability.
+                         </li>
+                       </ul>
+                     </div>
+                   ),
+                 },
+                 {
+                   title: "2023",
+                   content: (
+                     <div>
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
+                                <Image
+                                    src="/images/cornell-logo.png"
+                                    alt="Cornell University"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div>
+                                <h4 className="text-xl md:text-2xl font-bold text-white">
+                                    B.S. in Information Science, Systems, and Technology
+                                </h4>
+                                <p className="text-lg md:text-xl text-white">
+                                    Cornell University
+                                </p>
+                                <p className="text-lg md:text-xl text-neutral-400">
+                                    Aug 2023 - May 2027
+                                </p>
+                                <p className="text-lg md:text-xl text-neutral-400">
+                                    Ithaca, NY
+                                </p>
+                            </div>
+                        </div>
+                       <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-2">
+                         <span className="font-semibold text-white">Relevant Coursework:</span>
+                       </p>
+                       <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                         <li className="pl-1">
+                           Object-Oriented Programming, Data Structures, Discrete Structures, Networks, Java, R, Python, Web Development, iOS Development, Linear Algebra, Multivariable Calculus, Differential Equations, Probability & Statistics
                          </li>
                        </ul>
                      </div>
