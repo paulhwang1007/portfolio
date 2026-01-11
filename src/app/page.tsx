@@ -8,6 +8,7 @@ import { Section } from "@/components/home/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { DotLoader } from "@/components/ui/dot-loader";
+import { Timeline } from "@/components/ui/timeline";
 import { motion, AnimatePresence } from "framer-motion";
 
 const GAME_FRAMES = [
@@ -77,19 +78,76 @@ export default function Home() {
             
             <Hero />
             
-            <Section id="experience" title="Experience">
-               <div className="space-y-6">
-                  {[1, 2].map((item) => (
-                     <Card key={item} className="p-6">
-                        <div className="flex flex-col md:flex-row justify-between mb-2">
-                           <h3 className="text-xl font-bold">Role Title</h3>
-                           <span className="text-gray-400 text-sm">202X - Present</span>
-                        </div>
-                        <h4 className="text-blue-400 mb-4">Company Name</h4>
-                        <p className="text-gray-300">Description of your responsibilities and achievements.</p>
-                     </Card>
-                  ))}
-               </div>
+            <Section id="experience">
+               <Timeline data={[
+                 {
+                   title: "2024",
+                   content: (
+                     <div>
+                       <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                         Built and launched Aceternity UI and Aceternity UI Pro from scratch
+                       </p>
+                       <div className="grid grid-cols-2 gap-4">
+                         <img
+                           src="https://images.unsplash.com/photo-1721332155545-c7a8005a2527?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                           alt="startup template"
+                           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                         />
+                         <img
+                           src="https://images.unsplash.com/photo-1736760088924-f7b539b7a421?q=80&w=3330&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                           alt="startup template"
+                           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                         />
+                       </div>
+                     </div>
+                   ),
+                 },
+                 {
+                   title: "Early 2023",
+                   content: (
+                     <div>
+                       <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                         I usually run out of copy, but when I see content this big, I try to
+                         integrate lorem ipsum.
+                       </p>
+                       <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                         Lorem ipsum is for people who are too lazy to write copy. But we are
+                         not. Here are some more example of beautiful designs I built.
+                       </p>
+                       <div className="grid grid-cols-2 gap-4">
+                         <img
+                           src="https://images.unsplash.com/photo-1737976823336-d7667bf98c5f?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                           alt="hero template"
+                           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                         />
+                         <img
+                           src="https://images.unsplash.com/photo-1698319690184-c8c20573934d?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                           alt="feature template"
+                           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                         />
+                       </div>
+                     </div>
+                   ),
+                 },
+                 {
+                   title: "Changelog",
+                   content: (
+                     <div>
+                       <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+                         Deployed 5 new components on Aceternity today
+                       </p>
+                       <div className="mb-8">
+                         <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+                           ✅ Card grid component
+                         </div>
+                         <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+                           ✅ Startup template Aceternity
+                         </div>
+                       </div>
+                     </div>
+                   ),
+                 },
+               ]} />
             </Section>
 
             <Section id="skills" title="Skills">
