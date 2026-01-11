@@ -78,10 +78,10 @@ const CloudCanvas = React.memo(({ iconSlugs }: { iconSlugs: string[] }) => {
       initial: [0.1, -0.1],
       clickToFront: 500,
       outlineColour: "#0000",
-      maxSpeed: 0.03,
-      minSpeed: 0.01,
-      dragControl: true, // Enable dragging to ensure mouse events are captured?
-      decel: 0.9, // Slow down gradually
+      maxSpeed: 0.02, // Capped max speed
+      minSpeed: 0.005, // Constant slow idle speed
+      dragControl: true,
+      decel: 0.9,
       freezeActive: true,
       freezeDecel: true,
     },
@@ -89,7 +89,7 @@ const CloudCanvas = React.memo(({ iconSlugs }: { iconSlugs: string[] }) => {
 
   return (
     // @ts-ignore
-    <Cloud {...cloudProps} key={JSON.stringify(cloudProps.options)}>
+    <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>
   )
@@ -152,7 +152,7 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
                 ${hoveredIcon ? 'scale-110 border-blue-500/30 text-white bg-blue-500/10' : ''}
             `}>
                 <span className="transition-all duration-300">
-                    {hoveredIcon ? hoveredIcon : "Click on a Skill"}
+                    {hoveredIcon ? hoveredIcon : "Hover over a Skill"}
                 </span>
             </div>
             
