@@ -144,6 +144,39 @@ export default function Home() {
                    ),
                  },
                  {
+                   title: "2024",
+                   content: (
+                     <div>
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="relative h-12 w-12 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
+                                <Image
+                                    src="/images/pideltapsi-logo.jpg"
+                                    alt="Pi Delta Psi Incorporated"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div>
+                                <h4 className="text-xl md:text-2xl font-bold text-white">
+                                    Frontend Web Developer | Pi Delta Psi Incorporated
+                                </h4>
+                                <p className="text-lg md:text-xl text-neutral-400">
+                                    October 2024 - present | Ithaca, NY
+                                </p>
+                            </div>
+                        </div>
+                       <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                         <li className="pl-1">
+                           Developed and maintained a React.js production-quality web platform, deploying on Vercel with CI/CD pipelines to ensure reliable content updates and a consistent user experience.
+                         </li>
+                         <li className="pl-1">
+                           Optimized site performance and SEO by implementing Next.js best practices for load speed, indexing, and scalability.
+                         </li>
+                       </ul>
+                     </div>
+                   ),
+                 },
+                 {
                    title: "Changelog",
                    content: (
                      <div>
