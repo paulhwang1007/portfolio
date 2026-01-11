@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -8,7 +9,9 @@ import { Section } from "@/components/home/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { DotLoader } from "@/components/ui/dot-loader";
+import { Timeline } from "@/components/ui/timeline";
 import { motion, AnimatePresence } from "framer-motion";
+import { ExperienceItem } from "@/components/ui/ExperienceItem";
 
 const GAME_FRAMES = [
     [14, 7, 0, 8, 6, 13, 20],
@@ -77,19 +80,100 @@ export default function Home() {
             
             <Hero />
             
-            <Section id="experience" title="Experience">
-               <div className="space-y-6">
-                  {[1, 2].map((item) => (
-                     <Card key={item} className="p-6">
-                        <div className="flex flex-col md:flex-row justify-between mb-2">
-                           <h3 className="text-xl font-bold">Role Title</h3>
-                           <span className="text-gray-400 text-sm">202X - Present</span>
-                        </div>
-                        <h4 className="text-blue-400 mb-4">Company Name</h4>
-                        <p className="text-gray-300">Description of your responsibilities and achievements.</p>
-                     </Card>
-                  ))}
-               </div>
+            <Section id="experience" width="max-w-full">
+               <Timeline data={[
+                 {
+                   title: "2025",
+                   content: (
+                     <div>
+                       <ExperienceItem
+                         logo="/images/shop-online-logo.png"
+                         logoAlt="Shop Online New York"
+                         title="Software Engineer Intern"
+                         company="Shop Online New York"
+                         startPeriod="August 2025 - December 2025"
+                         location="Remote - Yonkers, NY"
+                         skills={["React", "Javascript", "Tailwind CSS", "Git", "Github", "Jira", "Figma"]}
+                       >
+                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                           <li className="pl-1">
+                             Developed 15+ reusable React components and integrated APIs through component-driven architecture, reducing development time by 30% and enforcing UI consistency.
+                           </li>
+                           <li className="pl-1">
+                             Optimized application performance by refactoring legacy code and applying React best practices, improving load speed by 40% for thousands of active users.
+                           </li>
+                         </ul>
+                       </ExperienceItem>
+
+                       <ExperienceItem
+                         logo="/images/cusd-logo.png"
+                         logoAlt="Cornell University Sustainable Design"
+                         title="Frontend Web Developer"
+                         company="Cornell University Sustainable Design"
+                         startPeriod="January 2025 - present"
+                         location="Ithaca, NY"
+                         skills={["HTML/CSS", "Javascript", "Figma"]}
+                       >
+                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                           <li className="pl-1">
+                             Implemented and deployed the project team’s responsive website from scratch using HTML, CSS, and JavaScript for 1000+ monthly visitors (<a href="https://cusd.cornell.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://cusd.cornell.edu/</a>), improving public visibility and access to team information.
+                           </li>
+                         </ul>
+                       </ExperienceItem>
+                     </div>
+                   ),
+                 },
+                 {
+                   title: "2024",
+                   content: (
+                     <div>
+                       <ExperienceItem
+                         logo="/images/pideltapsi-logo.jpg"
+                         logoAlt="Pi Delta Psi Incorporated"
+                         title="Frontend Web Developer"
+                         company="Pi Delta Psi Fraternity Inc."
+                         startPeriod="October 2024 - present"
+                         location="Ithaca, NY"
+                         skills={["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"]}
+                       >
+                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                           <li className="pl-1">
+                             Developed and maintained a React.js production-quality web platform, deploying on Vercel with CI/CD pipelines to ensure reliable content updates and a consistent user experience.
+                           </li>
+                           <li className="pl-1">
+                             Optimized site performance and SEO by implementing Next.js best practices for load speed, indexing, and scalability.
+                           </li>
+                         </ul>
+                       </ExperienceItem>
+                     </div>
+                   ),
+                 },
+                 {
+                   title: "2023",
+                   content: (
+                     <div>
+                       <ExperienceItem
+                         logo="/images/cornell-logo.png"
+                         logoAlt="Cornell University"
+                         title="B.S. in Information Science, Systems, and Technology"
+                         company="Cornell University"
+                         startPeriod="Aug 2023 - May 2027"
+                         location="Ithaca, NY"
+                         skills={["Java", "Python", "Swift", "R", "HTML/CSS", "Javascript"]}
+                       >
+                        <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-2">
+                          <span className="font-semibold text-white">Relevant Coursework:</span>
+                        </p>
+                        <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                          <li className="pl-1">
+                            Object-Oriented Programming, Data Structures, Discrete Structures, Networks, Java, R, Python, Web Development, iOS Development, Linear Algebra, Multivariable Calculus, Differential Equations, Probability & Statistics
+                          </li>
+                        </ul>
+                       </ExperienceItem>
+                     </div>
+                   ),
+                 },
+               ]} />
             </Section>
 
             <Section id="skills" title="Skills">
