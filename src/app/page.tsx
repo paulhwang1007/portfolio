@@ -77,39 +77,6 @@ export default function Home() {
             
             <Hero />
             
-            <Section id="about" title="About Me">
-              <div className="grid gap-8 md:grid-cols-2">
-                <Card className="p-8">
-                  <p className="text-gray-300 leading-relaxed">
-                    [About Content Placeholder]
-                    <br />
-                    Passionate developer with a love for clean code and minimal design.
-                  </p>
-                </Card>
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-xl font-semibold">My Journey</h3>
-                  <p className="text-gray-400">Brief overview of your career path.</p>
-                </div>
-              </div>
-            </Section>
-            
-            <Section id="projects" title="Featured Projects">
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[1, 2, 3].map((item) => (
-                  <Card key={item} className="aspect-video p-6 flex flex-col justify-end group cursor-pointer hover:border-blue-500/30 transition-colors">
-                    <div className="mb-2 h-12 w-12 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
-                      {/* Icon Placeholder */}
-                    </div>
-                    <h3 className="text-lg font-semibold">Project {item}</h3>
-                    <p className="text-sm text-gray-400">Short description of the project goes here.</p>
-                  </Card>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                  <Button variant="outline">View All Projects</Button>
-              </div>
-            </Section>
-
             <Section id="experience" title="Experience">
                <div className="space-y-6">
                   {[1, 2].map((item) => (
@@ -132,6 +99,39 @@ export default function Home() {
                         {skill}
                      </div>
                   ))}
+              </div>
+            </Section>
+            
+            <Section id="projects" title="Featured Projects">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {[1, 2, 3].map((item) => (
+                  <Card key={item} className="aspect-video p-6 flex flex-col justify-end group cursor-pointer hover:border-blue-500/30 transition-colors">
+                    <div className="mb-2 h-12 w-12 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                      {/* Icon Placeholder */}
+                    </div>
+                    <h3 className="text-lg font-semibold">Project {item}</h3>
+                    <p className="text-sm text-gray-400">Short description of the project goes here.</p>
+                  </Card>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                  <Button variant="outline">View All Projects</Button>
+              </div>
+            </Section>
+
+            <Section id="about" title="About Me">
+              <div className="grid gap-8 md:grid-cols-2">
+                <Card className="p-8">
+                  <p className="text-gray-300 leading-relaxed">
+                    [About Content Placeholder]
+                    <br />
+                    Passionate developer with a love for clean code and minimal design.
+                  </p>
+                </Card>
+                <div className="flex flex-col justify-center space-y-4">
+                  <h3 className="text-xl font-semibold">My Journey</h3>
+                  <p className="text-gray-400">Brief overview of your career path.</p>
+                </div>
               </div>
             </Section>
             
