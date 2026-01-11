@@ -10,37 +10,7 @@ import {
   SimpleIcon,
 } from "react-icon-cloud"
 
-export const cloudProps: Omit<ICloud, "children"> = {
-  containerProps: {
-    style: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "100%",
-      paddingTop: 40,
-      position: "relative", // Needed for static absolute positioning of tooltip
-      zIndex: 1,
-    },
-  },
-  options: {
-    reverse: true,
-    depth: 1,
-    wheelZoom: false,
-    imageScale: 2,
-    activeCursor: "default",
-    tooltip: "div",
-    tooltipDelay: 0,
-    tooltipClass: "icon-cloud-tooltip",
-    initial: [0.1, -0.1],
-    clickToFront: 500,
-    outlineColour: "#0000",
-    maxSpeed: 0.04,
-    minSpeed: 0.01, // Keep it moving slowly when idle
-    freezeActive: true, // Stop rotating when hovering over an icon
-    freezeDecel: true, // Smooth deceleration to stop
-    // dragControl: false,
-  },
-}
+
 
 export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510"
@@ -84,9 +54,42 @@ const CloudCanvas = React.memo(({ iconSlugs }: { iconSlugs: string[] }) => {
     )
   }, [data, theme])
 
+  const cloudProps: Omit<ICloud, "children"> = useMemo(() => ({
+    containerProps: {
+      style: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        paddingTop: 40,
+        position: "relative",
+        zIndex: 1,
+      },
+    },
+    options: {
+      reverse: true,
+      depth: 1,
+      wheelZoom: false,
+      imageScale: 2,
+      activeCursor: "default",
+      tooltip: "div",
+      tooltipDelay: 0,
+      tooltipClass: "icon-cloud-tooltip",
+      initial: [0.1, -0.1],
+      clickToFront: 500,
+      outlineColour: "#0000",
+      maxSpeed: 0.03,
+      minSpeed: 0.01,
+      dragControl: true, // Enable dragging to ensure mouse events are captured?
+      decel: 0.9, // Slow down gradually
+      freezeActive: true,
+      freezeDecel: true,
+    },
+  }), [])
+
   return (
     // @ts-ignore
-    <Cloud {...cloudProps}>
+    <Cloud {...cloudProps} key={JSON.stringify(cloudProps.options)}>
       <>{renderedIcons}</>
     </Cloud>
   )
@@ -139,17 +142,28 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
         <CloudCanvas iconSlugs={iconSlugs} />
 
         {/* Custom Persistent Label */}
-        <div className="mt-8"> {/* Position below cloud */}
+        {/* Custom Persistent Label */}
+        <div className="mt-8 flex flex-col items-center gap-2"> {/* Position below cloud */}
              <div className={`
-                pointer-events-none px-6 py-2 rounded-full 
-                bg-white/5 border border-white/10 text-sm font-medium
+                pointer-events-none px-8 py-3 rounded-full 
+                bg-white/5 border border-white/10 text-base font-medium
                 text-gray-300 backdrop-blur-md transition-all duration-300
                 flex items-center gap-2 shadow-lg
                 ${hoveredIcon ? 'scale-110 border-blue-500/30 text-white bg-blue-500/10' : ''}
             `}>
                 <span className="transition-all duration-300">
-                    {hoveredIcon ? hoveredIcon : "Hover over a Skill"}
+                    {hoveredIcon ? hoveredIcon : "Click on a Skill"}
                 </span>
+            </div>
+            
+            <div className={`
+                transition-all duration-500 overflow-hidden
+                ${hoveredIcon ? 'h-0 opacity-0' : 'h-6 opacity-100'}
+            `}>
+                <p className="text-sm text-gray-400/50 font-light tracking-wide flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 17a2 2 0 0 1-2 2h-9.8a3.3 3.3 0 0 1-2.4-1.2l-2-2.7a2 2 0 0 1 .4-2.8h0a2.2 2.2 0 0 1 2.8.4l1.2 1.4"/><path d="m14.6 11.4 2.8-5.7a1.8 1.8 0 0 1 3.3 1.6l-1 5.3"/></svg>
+                    Hold & Drag to Rotate Cloud
+                </p>
             </div>
         </div>
     </div>
