@@ -27,9 +27,13 @@ export function ExperienceItem({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ staggerChildren: 0.1 }}
-      className="mb-12 p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-white/20 hover:bg-white/10 shadow-[0_0_20px_-5px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)] transition-all duration-300"
+      viewport={{ once: true, margin: "-200px" }}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+      }}
+      transition={{ duration: 0.5, staggerChildren: 0.1 }}
+      className="mb-12 p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-white/20 hover:bg-white/10 shadow-[0_0_20px_-5px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)] transition-[background-color,border-color,box-shadow] duration-300"
     >
       <motion.div 
         variants={{
