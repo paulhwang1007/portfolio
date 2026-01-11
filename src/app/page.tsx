@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { DotLoader } from "@/components/ui/dot-loader";
 import { Timeline } from "@/components/ui/timeline";
 import { motion, AnimatePresence } from "framer-motion";
+import { ExperienceItem } from "@/components/ui/ExperienceItem";
 
 const GAME_FRAMES = [
     [14, 7, 0, 8, 6, 13, 20],
@@ -86,31 +86,14 @@ export default function Home() {
                    title: "2025",
                    content: (
                      <div>
-                       <div className="mb-12">
-                          <div className="flex items-start gap-4 mb-6">
-                              <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
-                                  <Image
-                                      src="/images/shop-online-logo.png"
-                                      alt="Shop Online New York"
-                                      fill
-                                      className="object-contain"
-                                  />
-                              </div>
-                              <div>
-                                  <h4 className="text-xl md:text-2xl font-bold text-white">
-                                      Software Engineer Intern
-                                  </h4>
-                                  <p className="text-lg md:text-xl text-white">
-                                      Shop Online New York
-                                  </p>
-                                  <p className="text-lg md:text-xl text-neutral-400">
-                                      August 2025 - December 2025
-                                  </p>
-                                  <p className="text-lg md:text-xl text-neutral-400">
-                                      Remote - Yonkers, NY
-                                  </p>
-                              </div>
-                          </div>
+                       <ExperienceItem
+                         logo="/images/shop-online-logo.png"
+                         logoAlt="Shop Online New York"
+                         title="Software Engineer Intern"
+                         company="Shop Online New York"
+                         startPeriod="August 2025 - December 2025"
+                         location="Remote - Yonkers, NY"
+                       >
                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
                              Developed 15+ reusable React components and integrated APIs through component-driven architecture, reducing development time by 30% and enforcing UI consistency.
@@ -119,39 +102,22 @@ export default function Home() {
                              Optimized application performance by refactoring legacy code and applying React best practices, improving load speed by 40% for thousands of active users.
                            </li>
                          </ul>
-                       </div>
+                       </ExperienceItem>
 
-                       <div>
-                          <div className="flex items-start gap-4 mb-6">
-                              <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
-                                  <Image
-                                      src="/images/cusd-logo.png"
-                                      alt="Cornell University Sustainable Design"
-                                      fill
-                                      className="object-contain"
-                                  />
-                              </div>
-                              <div>
-                                  <h4 className="text-xl md:text-2xl font-bold text-white">
-                                      Frontend Web Developer
-                                  </h4>
-                                  <p className="text-lg md:text-xl text-white">
-                                      Cornell University Sustainable Design
-                                  </p>
-                                  <p className="text-lg md:text-xl text-neutral-400">
-                                      January 2025 - present
-                                  </p>
-                                  <p className="text-lg md:text-xl text-neutral-400">
-                                      Ithaca, NY
-                                  </p>
-                              </div>
-                          </div>
+                       <ExperienceItem
+                         logo="/images/cusd-logo.png"
+                         logoAlt="Cornell University Sustainable Design"
+                         title="Frontend Web Developer"
+                         company="Cornell University Sustainable Design"
+                         startPeriod="January 2025 - present"
+                         location="Ithaca, NY"
+                       >
                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
                              Implemented and deployed the project team’s responsive website from scratch using HTML, CSS, and JavaScript for 1000+ monthly visitors (<a href="https://cusd.cornell.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://cusd.cornell.edu/</a>), improving public visibility and access to team information.
                            </li>
                          </ul>
-                       </div>
+                       </ExperienceItem>
                      </div>
                    ),
                  },
@@ -159,38 +125,23 @@ export default function Home() {
                    title: "2024",
                    content: (
                      <div>
-                        <div className="flex items-start gap-4 mb-6">
-                            <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
-                                <Image
-                                    src="/images/pideltapsi-logo.jpg"
-                                    alt="Pi Delta Psi Incorporated"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                            <div>
-                                <h4 className="text-xl md:text-2xl font-bold text-white">
-                                    Frontend Web Developer
-                                </h4>
-                                <p className="text-lg md:text-xl text-white">
-                                    Pi Delta Psi Fraternity Inc.
-                                </p>
-                                <p className="text-lg md:text-xl text-neutral-400">
-                                    October 2024 - present
-                                </p>
-                                <p className="text-lg md:text-xl text-neutral-400">
-                                    Ithaca, NY
-                                </p>
-                            </div>
-                        </div>
-                       <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
-                         <li className="pl-1">
-                           Developed and maintained a React.js production-quality web platform, deploying on Vercel with CI/CD pipelines to ensure reliable content updates and a consistent user experience.
-                         </li>
-                         <li className="pl-1">
-                           Optimized site performance and SEO by implementing Next.js best practices for load speed, indexing, and scalability.
-                         </li>
-                       </ul>
+                       <ExperienceItem
+                         logo="/images/pideltapsi-logo.jpg"
+                         logoAlt="Pi Delta Psi Incorporated"
+                         title="Frontend Web Developer"
+                         company="Pi Delta Psi Fraternity Inc."
+                         startPeriod="October 2024 - present"
+                         location="Ithaca, NY"
+                       >
+                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                           <li className="pl-1">
+                             Developed and maintained a React.js production-quality web platform, deploying on Vercel with CI/CD pipelines to ensure reliable content updates and a consistent user experience.
+                           </li>
+                           <li className="pl-1">
+                             Optimized site performance and SEO by implementing Next.js best practices for load speed, indexing, and scalability.
+                           </li>
+                         </ul>
+                       </ExperienceItem>
                      </div>
                    ),
                  },
@@ -198,42 +149,26 @@ export default function Home() {
                    title: "2023",
                    content: (
                      <div>
-                        <div className="flex items-start gap-4 mb-6">
-                            <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
-                                <Image
-                                    src="/images/cornell-logo.png"
-                                    alt="Cornell University"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                            <div>
-                                <h4 className="text-xl md:text-2xl font-bold text-white">
-                                    B.S. in Information Science, Systems, and Technology
-                                </h4>
-                                <p className="text-lg md:text-xl text-white">
-                                    Cornell University
-                                </p>
-                                <p className="text-lg md:text-xl text-neutral-400">
-                                    Aug 2023 - May 2027
-                                </p>
-                                <p className="text-lg md:text-xl text-neutral-400">
-                                    Ithaca, NY
-                                </p>
-                            </div>
-                        </div>
-                       <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-2">
-                         <span className="font-semibold text-white">Relevant Coursework:</span>
-                       </p>
-                       <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
-                         <li className="pl-1">
-                           Object-Oriented Programming, Data Structures, Discrete Structures, Networks, Java, R, Python, Web Development, iOS Development, Linear Algebra, Multivariable Calculus, Differential Equations, Probability & Statistics
-                         </li>
-                       </ul>
+                       <ExperienceItem
+                         logo="/images/cornell-logo.png"
+                         logoAlt="Cornell University"
+                         title="B.S. in Information Science, Systems, and Technology"
+                         company="Cornell University"
+                         startPeriod="Aug 2023 - May 2027"
+                         location="Ithaca, NY"
+                       >
+                        <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-2">
+                          <span className="font-semibold text-white">Relevant Coursework:</span>
+                        </p>
+                        <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                          <li className="pl-1">
+                            Object-Oriented Programming, Data Structures, Discrete Structures, Networks, Java, R, Python, Web Development, iOS Development, Linear Algebra, Multivariable Calculus, Differential Equations, Probability & Statistics
+                          </li>
+                        </ul>
+                       </ExperienceItem>
                      </div>
                    ),
                  },
-
                ]} />
             </Section>
 
