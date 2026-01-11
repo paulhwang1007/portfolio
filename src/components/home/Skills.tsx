@@ -34,7 +34,7 @@ const slugs = [
 export function Skills() {
   return (
     <Section id="skills" title="Skills">
-        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg mx-auto">
+        <div className="relative flex size-full max-w-lg items-center justify-center rounded-lg mx-auto">
             <IconCloud iconSlugs={slugs} />
         </div>
     </Section>

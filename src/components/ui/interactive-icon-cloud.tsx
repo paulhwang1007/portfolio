@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import { useTheme } from "next-themes"
 import {
   Cloud,
@@ -18,6 +18,8 @@ export const cloudProps: Omit<ICloud, "children"> = {
       alignItems: "center",
       width: "100%",
       paddingTop: 40,
+      position: "relative", // Needed for static absolute positioning of tooltip
+      zIndex: 1,
     },
   },
   options: {
@@ -26,13 +28,16 @@ export const cloudProps: Omit<ICloud, "children"> = {
     wheelZoom: false,
     imageScale: 2,
     activeCursor: "default",
-    tooltip: "native",
+    tooltip: "div",
+    tooltipDelay: 0,
+    tooltipClass: "icon-cloud-tooltip",
     initial: [0.1, -0.1],
     clickToFront: 500,
-    tooltipDelay: 0,
     outlineColour: "#0000",
     maxSpeed: 0.04,
-    minSpeed: 0,
+    minSpeed: 0.01, // Keep it moving slowly when idle
+    freezeActive: true, // Stop rotating when hovering over an icon
+    freezeDecel: true, // Smooth deceleration to stop
     // dragControl: false,
   },
 }
@@ -63,7 +68,7 @@ export type DynamicCloudProps = {
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>
 
-export function IconCloud({ iconSlugs }: DynamicCloudProps) {
+const CloudCanvas = React.memo(({ iconSlugs }: { iconSlugs: string[] }) => {
   const [data, setData] = useState<IconData | null>(null)
   const { theme } = useTheme()
 
@@ -84,5 +89,69 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>
+  )
+})
+CloudCanvas.displayName = "CloudCanvas";
+
+export function IconCloud({ iconSlugs }: DynamicCloudProps) {
+  const [hoveredIcon, setHoveredIcon] = useState<string | null>(null)
+
+  useEffect(() => {
+    // Robust MutationObserver to sync the custom label with the internal tooltip
+    const observer = new MutationObserver((mutations) => {
+      const tooltip = document.querySelector('.icon-cloud-tooltip') as HTMLElement;
+      if (tooltip) {
+        // TagCanvas sets display: none when hidden, or opacity.
+        // We check inline styles specifically.
+        const isHidden = tooltip.style.display === 'none' || tooltip.style.opacity === '0';
+        const text = tooltip.innerText.trim();
+        
+        if (!isHidden && text) {
+            setHoveredIcon((prev) => prev === text ? prev : text);
+        } else {
+            setHoveredIcon((prev) => prev === null ? prev : null);
+        }
+      }
+    });
+
+    observer.observe(document.body, { 
+        childList: true, 
+        subtree: true, 
+        attributes: true, 
+        attributeFilter: ['style', 'display', 'opacity'] 
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center">
+        <style jsx global>{`
+            /* Hide the original library tooltip purely visually */
+            .icon-cloud-tooltip {
+                opacity: 0 !important;
+                pointer-events: none !important;
+                z-index: -1000 !important;
+                /* Note: We do NOT set display: none here, or the library might think it's hidden and stop updating it */
+            }
+        `}</style>
+        
+        <CloudCanvas iconSlugs={iconSlugs} />
+
+        {/* Custom Persistent Label */}
+        <div className="mt-8"> {/* Position below cloud */}
+             <div className={`
+                pointer-events-none px-6 py-2 rounded-full 
+                bg-white/5 border border-white/10 text-sm font-medium
+                text-gray-300 backdrop-blur-md transition-all duration-300
+                flex items-center gap-2 shadow-lg
+                ${hoveredIcon ? 'scale-110 border-blue-500/30 text-white bg-blue-500/10' : ''}
+            `}>
+                <span className="transition-all duration-300">
+                    {hoveredIcon ? hoveredIcon : "Hover over a Skill"}
+                </span>
+            </div>
+        </div>
+    </div>
   )
 }
