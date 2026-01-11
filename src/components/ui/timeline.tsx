@@ -14,7 +14,7 @@ interface TimelineEntry {
 
 const TimelineItem = ({ item }: { item: TimelineEntry }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
+  const isInView = useInView(ref, { margin: "-40% 0px -59% 0px" });
 
   return (
     <div
