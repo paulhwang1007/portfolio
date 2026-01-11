@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -81,24 +83,38 @@ export default function Home() {
             <Section id="experience">
                <Timeline data={[
                  {
-                   title: "2024",
+                   title: "2025",
                    content: (
                      <div>
-                       <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                         Built and launched Aceternity UI and Aceternity UI Pro from scratch
-                       </p>
-                       <div className="grid grid-cols-2 gap-4">
-                         <img
-                           src="https://images.unsplash.com/photo-1721332155545-c7a8005a2527?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                           alt="startup template"
-                           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                         />
-                         <img
-                           src="https://images.unsplash.com/photo-1736760088924-f7b539b7a421?q=80&w=3330&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                           alt="startup template"
-                           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                         />
-                       </div>
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="relative h-12 w-12 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden">
+                                <Image
+                                    src="/images/shop-online-logo.png"
+                                    alt="Shop Online New York"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div>
+                                <h4 className="text-sm md:text-base font-bold text-white">
+                                    Software Engineer Intern | Shop Online New York
+                                </h4>
+                                <p className="text-sm text-neutral-400">
+                                    August 2025 - December 2025 · Remote - Yonkers, NY
+                                </p>
+                            </div>
+                        </div>
+                       <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-xs md:text-sm leading-relaxed">
+                         <li className="pl-1">
+                           Developed 15+ reusable React components, reducing development time by 30% by implementing component-driven architecture and collaborating with design teams to enforce UI consistency.
+                         </li>
+                         <li className="pl-1">
+                           Collaborated with cross-functional back-end and product teams to integrate 20+ APIs, increasing user engagement by 25% by ensuring robust data handling and seamless feature rollout.
+                         </li>
+                         <li className="pl-1">
+                           Conducted peer code reviews and implemented front-end optimizations, improving load speed by 40% by refactoring legacy code and applying React best practices to support thousands of active users.
+                         </li>
+                       </ul>
                      </div>
                    ),
                  },
