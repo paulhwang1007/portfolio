@@ -1,3 +1,5 @@
+"use client";
+
 import { HTMLMotionProps, motion } from "framer-motion";
 
 interface SectionProps extends HTMLMotionProps<"section"> {
