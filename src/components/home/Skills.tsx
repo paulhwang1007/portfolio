@@ -4,35 +4,31 @@ import { Section } from "@/components/home/Section";
 import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 const slugs = [
-  "typescript",
-  "javascript",
   "java",
-  "react",
+  "javascript",
+  "python",
+  "r",
+  "mysql", // Represents SQL
+  "swift",
   "html5",
   "css3",
-  "nodedotjs",
+  "react",
   "nextdotjs",
-  "prisma",
+  "tailwindcss",
+  "spring",
+  "nodedotjs",
+  "express",
   "postgresql",
-  "vercel",
+  "mongodb",
   "docker",
   "git",
   "github",
-  "visualstudiocode",
   "figma",
-  "swift",
-  "r",
-  "spring",
+  "vercel",
+  "typescript",
   "jira",
-  "amazonaws",
-  "flutter",
-  "dart",
-  "firebase",
-  "nginx",
-  "cypress",
-  "jest",
-  "gitlab",
-  "android"
+  "supabase",
+  "adobe"
 ];
 
 export function Skills() {
