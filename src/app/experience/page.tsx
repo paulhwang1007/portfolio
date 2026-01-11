@@ -4,7 +4,7 @@ import { Section } from "@/components/home/Section";
 
 export default function ExperiencePage() {
   return (
-    <div className="bg-black text-white">
+    <div className="text-white">
       <Navbar />
       <Section id="experience-detail" title="Experience">
         <p className="text-gray-300">Detailed experience history.</p>
