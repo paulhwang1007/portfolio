@@ -12,6 +12,7 @@ import { DotLoader } from "@/components/ui/dot-loader";
 import { Timeline } from "@/components/ui/timeline";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExperienceItem } from "@/components/ui/ExperienceItem";
+import { Skills } from "@/components/home/Skills";
 
 const GAME_FRAMES = [
     [14, 7, 0, 8, 6, 13, 20],
@@ -176,15 +177,7 @@ export default function Home() {
                ]} />
             </Section>
 
-            <Section id="skills" title="Skills">
-              <div className="flex flex-wrap gap-3">
-                  {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Design"].map((skill) => (
-                     <div key={skill} className="rounded-full bg-white/5 px-4 py-2 text-sm text-gray-300 border border-white/10">
-                        {skill}
-                     </div>
-                  ))}
-              </div>
-            </Section>
+
             
             <Section id="projects" title="Featured Projects">
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -202,6 +195,8 @@ export default function Home() {
                   <Button variant="outline">View All Projects</Button>
               </div>
             </Section>
+
+            <Skills />
 
             <Section id="about" title="About Me">
               <div className="grid gap-8 md:grid-cols-2">
