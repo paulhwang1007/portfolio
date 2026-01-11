@@ -80,7 +80,7 @@ export default function Home() {
             
             <Hero />
             
-            <Section id="experience">
+            <Section id="experience" width="max-w-full">
                <Timeline data={[
                  {
                    title: "2025",
@@ -97,23 +97,20 @@ export default function Home() {
                                   />
                               </div>
                               <div>
-                                  <h4 className="text-sm md:text-base font-bold text-white">
+                                  <h4 className="text-xl md:text-2xl font-bold text-white">
                                       Software Engineer Intern | Shop Online New York
                                   </h4>
-                                  <p className="text-sm text-neutral-400">
+                                  <p className="text-lg md:text-xl text-neutral-400">
                                       August 2025 - December 2025 | Remote - Yonkers, NY
                                   </p>
                               </div>
                           </div>
-                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-xs md:text-sm leading-relaxed">
+                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
-                             Developed 15+ reusable React components, reducing development time by 30% by implementing component-driven architecture and collaborating with design teams to enforce UI consistency.
+                             Developed reusable React components and integrated APIs through component-driven architecture to enforce UI consistency and seamless feature rollouts.
                            </li>
                            <li className="pl-1">
-                             Collaborated with cross-functional back-end and product teams to integrate 20+ APIs, increasing user engagement by 25% by ensuring robust data handling and seamless feature rollout.
-                           </li>
-                           <li className="pl-1">
-                             Conducted peer code reviews and implemented front-end optimizations, improving load speed by 40% by refactoring legacy code and applying React best practices to support thousands of active users.
+                             Optimized application performance by refactoring legacy code, conducting code reviews, and applying React best practices for thousands of active users.
                            </li>
                          </ul>
                        </div>
@@ -129,15 +126,15 @@ export default function Home() {
                                   />
                               </div>
                               <div>
-                                  <h4 className="text-sm md:text-base font-bold text-white">
+                                  <h4 className="text-xl md:text-2xl font-bold text-white">
                                       Frontend Web Developer | Cornell University Sustainable Design
                                   </h4>
-                                  <p className="text-sm text-neutral-400">
+                                  <p className="text-lg md:text-xl text-neutral-400">
                                       January 2025 - present | Ithaca, NY
                                   </p>
                               </div>
                           </div>
-                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-xs md:text-sm leading-relaxed">
+                         <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                            <li className="pl-1">
                              Implemented and deployed the project team’s responsive website from scratch using HTML, CSS, and JavaScript for 1000+ monthly visitors (<a href="https://cusd.cornell.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://cusd.cornell.edu/</a>), improving public visibility and access to team information.
                            </li>

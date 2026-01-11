@@ -7,9 +7,10 @@ interface SectionProps extends HTMLMotionProps<"section"> {
   title?: string;
   children: React.ReactNode;
   className?: string;
+  width?: string;
 }
 
-export function Section({ id, title, children, className = "", ...props }: SectionProps) {
+export function Section({ id, title, children, className = "", width = "max-w-5xl", ...props }: SectionProps) {
   return (
     <motion.section id={id} className={`min-h-screen py-24 px-4 flex flex-col items-center justify-center ${className}`} {...props}>
       <motion.div
@@ -17,7 +18,7 @@ export function Section({ id, title, children, className = "", ...props }: Secti
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-5xl"
+        className={`w-full ${width}`}
       >
         {title && (
           <div className="mb-12 flex items-center gap-4">
