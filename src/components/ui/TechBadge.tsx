@@ -20,7 +20,10 @@ import {
   SiSpringboot,
   SiJira,
   SiSwift,
-  SiR
+  SiR,
+  SiSupabase,
+  SiFramer,
+  SiPostgresql
 } from "react-icons/si";
 import { TbComponents, TbSeo } from "react-icons/tb"; // Generic
 import { LuFileCode } from "react-icons/lu";
@@ -33,6 +36,7 @@ interface TechConfig {
 const techMap: Record<string, TechConfig> = {
   "React": { icon: FaReact, color: "text-blue-400" },
   "Next.js": { icon: SiNextdotjs, color: "text-white" },
+  "Next.js 14": { icon: SiNextdotjs, color: "text-white" },
   "TypeScript": { icon: SiTypescript, color: "text-blue-500" },
   "Tailwind CSS": { icon: SiTailwindcss, color: "text-cyan-400" },
   "Node.js": { icon: SiNodedotjs, color: "text-green-500" },
@@ -48,6 +52,9 @@ const techMap: Record<string, TechConfig> = {
   "Jira": { icon: SiJira, color: "text-blue-500" },
   "Swift": { icon: SiSwift, color: "text-orange-500" },
   "R": { icon: SiR, color: "text-blue-600" },
+  "Supabase": { icon: SiSupabase, color: "text-emerald-400" },
+  "PostgreSQL": { icon: SiPostgresql, color: "text-blue-400" },
+  "Framer Motion": { icon: SiFramer, color: "text-purple-500" },
   // Generic fallbacks or specific other tools
   "SEO": { icon: TbSeo, color: "text-green-400" },
   "CI/CD": { icon: SiVercel, color: "text-white" }, // Using Vercel icon for CI/CD context here or generic

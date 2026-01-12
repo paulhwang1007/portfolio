@@ -2,26 +2,27 @@ import { Project } from "./types";
 
 export const PROJECTS: Project[] = [
   {
-    id: "recall",
-    title: "Recall",
-    category: "Web App",
-    shortDescription: "A second brain for your digital life.",
-    fullDescription: "Recall is a powerful knowledge management tool that acts as your second brain. It helps you capture, organize, and retrieve information instantly using vector search and AI summarization. Built to handle thousands of notes with instant retrieval latency.",
-    techStack: ["Next.js", "TypeScript", "Supabase", "OpenAI"],
-    imageUrl: "/images/recall-mockup.png", // Placeholder
-    liveLink: "https://recall.ai",
+    id: "domi",
+    title: "Domi",
+    category: "Extension + Web App",
+    shortDescription: "An AI-powered second brain for your digital life.",
+    fullDescription: "Effortlessly save, organize, and chat with your digital memories. The smartest way to bookmark the web. Instantly capture any webpage or snippet using the dedicated Chrome Extension, which automatically syncs and stores your content to your personal dashboard. Domi integrates seamlessly into your browsing workflow, allowing you to retrieve information using natural language queries.",
+    techStack: ["Next.js 14", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Framer Motion"],
+    imageUrl: "/images/domi-landing.png",
+    liveLink: "https://domi-ai.vercel.app/",
+    githubLink: "https://github.com/paulhwang1007/domi",
     featured: true,
     span: "md:col-span-2 md:row-span-2",
     features: [
-        "Semantic Search using OpenAI Embeddings",
-        "Auto-tagging and summarization of notes",
-        "Graph view visualization of connected ideas",
-        "Real-time collaboration with team members"
+        "Instant capture via Extension or shortcuts",
+        "Smart auto-tagging and organization",
+        "Vector search for semantic retrieval",
+        "Unified dashboard with smart category grouping"
     ],
     gallery: [
-        "/images/recall-1.png",
-        "/images/recall-2.png", 
-        "/images/recall-3.png"
+        "/images/domi-dashboard.png",
+        "/images/domi-extension.png", 
+        "/images/domi-landing.png"
     ]
   },
   {

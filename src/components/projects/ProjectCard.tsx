@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Project } from "./types";
 import { cn } from "@/lib/utils";
 
+import Image from "next/image";
+
 interface ProjectCardProps {
   project: Project;
   onClick: () => void;
@@ -22,12 +24,14 @@ export const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
         {/* Background Image / Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-      
-      {/* Placeholder for Image - in real app would use project.imageUrl */}
-      <div className="absolute inset-0 bg-neutral-900 z-0">
-         {/* Use a colored gradient placeholder based on ID hash or something simple */}
-         <div className={`w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={project.imageUrl}
+          alt={project.title}
+          fill
+          className="object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
       </div>
 
       <div className="relative z-20 h-full p-6 flex flex-col justify-end">
