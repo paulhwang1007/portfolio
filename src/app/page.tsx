@@ -258,6 +258,15 @@ export default function Home() {
                           </a>
                           <a href="https://www.linkedin.com/in/paul-kyojin-hwang/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors break-all">https://www.linkedin.com/in/paul-kyojin-hwang/</a>
                        </div>
+                       
+                       <div className="flex items-center gap-3">
+                          <a href="/paulhwang_resume.pdf" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all shrink-0">
+                             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                             </svg>
+                          </a>
+                          <a href="/paulhwang_resume.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors break-all">Download Resume</a>
+                       </div>
                     </div>
                  </Card>
                </div>
