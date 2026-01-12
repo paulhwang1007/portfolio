@@ -63,12 +63,24 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     >
                         {project.category}
                     </motion.p>
-                    <motion.h3 
-                        layoutId={`title-${project.id}`}
-                        className="text-4xl md:text-5xl font-bold text-white mb-4"
-                    >
-                    {project.title}
-                    </motion.h3>
+                    <div className="flex items-center gap-4 mb-4">
+                        {project.logoUrl && (
+                             <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-black/20 backdrop-blur-md p-2">
+                                 <Image 
+                                    src={project.logoUrl}
+                                    alt={`${project.title} logo`}
+                                    fill
+                                    className="object-contain p-1"
+                                 />
+                             </div>
+                        )}
+                        <motion.h3 
+                            layoutId={`title-${project.id}`}
+                            className="text-4xl md:text-5xl font-bold text-white"
+                        >
+                        {project.title}
+                        </motion.h3>
+                    </div>
 
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
@@ -98,6 +110,18 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 View Code
                             </a>
                         )}
+                        {project.repoLinks?.map((link, i) => (
+                             <a 
+                                key={i}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-5 py-2.5 bg-black/40 hover:bg-black/60 border border-white/10 backdrop-blur-md text-white rounded-xl font-medium transition-colors text-sm"
+                            >
+                                <Github size={16} />
+                                {link.label}
+                            </a>
+                        ))}
                     </motion.div>
                  </div>
             </div>

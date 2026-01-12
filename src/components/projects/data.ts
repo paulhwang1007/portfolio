@@ -9,6 +9,7 @@ export const PROJECTS: Project[] = [
     fullDescription: "Effortlessly save, organize, and chat with your digital memories. The smartest way to bookmark the web. Instantly capture any webpage or snippet using the dedicated Chrome Extension, which automatically syncs and stores your content to your personal dashboard. Domi integrates seamlessly into your browsing workflow, allowing you to retrieve information using natural language queries.",
     techStack: ["Next.js 14", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Framer Motion"],
     imageUrl: "/images/domi-landing.png",
+    logoUrl: "/images/domi-logo.png",
     liveLink: "https://domi-ai.vercel.app/",
     githubLink: "https://github.com/paulhwang1007/domi",
     featured: true,
@@ -26,22 +27,27 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    id: "swng",
-    title: "Swng",
-    category: "Mobile App",
-    shortDescription: "Swing analysis for tennis players.",
-    fullDescription: "Swng uses computer vision to analyze tennis swings in real-time, providing feedback on form, speed, and trajectory to help players improve their game. It runs entirely on-device for maximum privacy and performance.",
-    techStack: ["React Native", "Python", "TensorFlow", "FastAPI"],
-    imageUrl: "/images/swng-mockup.png", // Placeholder
+    id: "perk",
+    title: "Perk",
+    category: "Full-stack Web App",
+    shortDescription: "Optimize your credit card setup.",
+    fullDescription: "A robust credit card management application designed to help users optimize their financial rewards. Perk allows users to track their credit card portfolio, compare benefits side-by-side, and manage card details including fees, bonuses, and opening dates. Built with a scalable Java Spring Boot backend and a modern React frontend using shadcn/ui.",
+    techStack: ["React", "Tailwind CSS", "JavaScript", "shadcn/ui", "Java", "Spring Boot", "PostgreSQL", "Docker"],
+    imageUrl: "/images/perk-dashboard.png",
+    logoUrl: "/images/perk-logo.png",
     featured: true,
+    repoLinks: [
+       { label: "Frontend", url: "https://github.com/paulhwang1007/credit-card-tracker-frontend" },
+       { label: "Backend", url: "https://github.com/paulhwang1007/credit-card-tracker" }
+    ],
     span: "md:col-span-1 md:row-span-2",
     features: [
-        "Real-time skeletal tracking at 60fps",
-        "Slow-motion replay analysis",
-        "Pro-player comparison overlay",
-        "Progress tracking over time"
+        "Comprehensive card details & bonus tracking",
+        "Side-by-side card comparison tool",
+        "Full CRUD wallet management",
+        "Visual dashboard for portfolio overview"
     ],
-    gallery: ["/images/swng-1.png", "/images/swng-2.png"]
+    gallery: ["/images/perk-dashboard.png", "/images/perk-compare.png", "/images/perk-add-card.png"]
   },
   {
     id: "clearly",

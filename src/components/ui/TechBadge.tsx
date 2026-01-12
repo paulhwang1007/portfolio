@@ -23,7 +23,9 @@ import {
   SiR,
   SiSupabase,
   SiFramer,
-  SiPostgresql
+  SiPostgresql,
+  SiDocker,
+  SiShadcnui
 } from "react-icons/si";
 import { TbComponents, TbSeo } from "react-icons/tb"; // Generic
 import { LuFileCode } from "react-icons/lu";
@@ -55,6 +57,11 @@ const techMap: Record<string, TechConfig> = {
   "Supabase": { icon: SiSupabase, color: "text-emerald-400" },
   "PostgreSQL": { icon: SiPostgresql, color: "text-blue-400" },
   "Framer Motion": { icon: SiFramer, color: "text-purple-500" },
+  "Spring Boot": { icon: SiSpringboot, color: "text-green-500" },
+  "Springboot": { icon: SiSpringboot, color: "text-green-500" },
+  "Docker": { icon: SiDocker, color: "text-blue-500" },
+  "shadcn": { icon: SiShadcnui, color: "text-white" },
+  "shadcn/ui": { icon: SiShadcnui, color: "text-white" },
   // Generic fallbacks or specific other tools
   "SEO": { icon: TbSeo, color: "text-green-400" },
   "CI/CD": { icon: SiVercel, color: "text-white" }, // Using Vercel icon for CI/CD context here or generic

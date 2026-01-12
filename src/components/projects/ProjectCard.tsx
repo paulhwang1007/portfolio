@@ -35,6 +35,18 @@ export const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       </div>
 
       <div className="relative z-20 h-full p-6 flex flex-col justify-end">
+        {project.logoUrl && (
+            <div className="absolute top-6 left-6 w-12 h-12 rounded-xl bg-black/20 backdrop-blur-md border border-white/10 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                 <Image 
+                    src={project.logoUrl}
+                    alt={`${project.title} logo`}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                 />
+            </div>
+        )}
+
         <motion.p 
             layoutId={`category-${project.id}`}
             className="text-xs font-medium text-blue-400 mb-2 uppercase tracking-wider"
