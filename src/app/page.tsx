@@ -180,7 +180,7 @@ export default function Home() {
 
 
             
-            <Section id="projects" title="Featured Projects">
+            <Section id="projects" title="Projects">
               <BentoGrid />
             </Section>
 

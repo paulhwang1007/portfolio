@@ -15,10 +15,10 @@ export const PROJECTS: Project[] = [
     featured: true,
     span: "md:col-span-2 md:row-span-2",
     features: [
-        "Instant capture via Extension or shortcuts",
-        "Smart auto-tagging and organization",
-        "Vector search for semantic retrieval",
-        "Unified dashboard with smart category grouping"
+        "Instant capture via Extension background scripts",
+        "Smart tagging and persistent memories stored using Supabase",
+        "Vector search retrieval via PostgreSQL & pgvector",
+        "Reactive dashboard built with Next.js Server Actions"
     ],
     gallery: [
         "/images/domi-dashboard.png",
@@ -42,10 +42,10 @@ export const PROJECTS: Project[] = [
     ],
     span: "md:col-span-2 md:row-span-2",
     features: [
-        "Comprehensive card details & bonus tracking",
-        "Side-by-side card comparison tool",
-        "Full CRUD wallet management",
-        "Visual dashboard for portfolio overview"
+        "RESTful API built with Java Spring Boot",
+        "Interactive state management via React Context",
+        "Data persistence in dockerized PostgreSQL",
+        "Modern UI components using shadcn/ui & Tailwind"
     ],
     gallery: ["/images/perk-dashboard.png", "/images/perk-compare.png", "/images/perk-add-card.png"]
   },
@@ -63,10 +63,10 @@ export const PROJECTS: Project[] = [
     featured: true,
     span: "md:col-span-2 md:row-span-2",
     features: [
-        "Search for courses by subject and semester",
-        "Filter courses by 6+ categories",
-        "Animated UI using Framer motion",
-        "Course details including 10+ fields"
+        "Live course data fetching via Cornell Roster API",
+        "Complex filtering state managed with React Hooks",
+        "Fluid transitions powered by Framer Motion",
+        "Modern grid layout using Aceternity UI components"
     ],
     gallery: [
         "/images/cornell-roster-landing.png", 
@@ -89,10 +89,10 @@ export const PROJECTS: Project[] = [
     featured: true,
     span: "md:col-span-2 md:row-span-2",
     features: [
-        "Pixel-perfect implementation from Figma",
-        "Responsive vanilla Layout",
-        "Custom timeline and project gallery components",
-        "Zero-dependency lightweight architecture"
+        "Pixel-perfect implementation of Figma prototypes",
+        "Responsive layout engine built with vanilla CSS",
+        "Interactive carousel coded in pure ES6 JavaScript",
+        "Performance-optimized with zero external dependencies"
     ],
     gallery: [
         "/images/cusd-landing.png", 
