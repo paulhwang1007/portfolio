@@ -13,6 +13,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExperienceItem } from "@/components/ui/ExperienceItem";
 import { Skills } from "@/components/home/Skills";
+import { BentoGrid } from "@/components/projects/BentoGrid";
 
 const GAME_FRAMES = [
     [14, 7, 0, 8, 6, 13, 20],
@@ -179,21 +180,8 @@ export default function Home() {
 
 
             
-            <Section id="projects" title="Featured Projects">
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[1, 2, 3].map((item) => (
-                  <Card key={item} className="aspect-video p-6 flex flex-col justify-end group cursor-pointer hover:border-blue-500/30 transition-colors">
-                    <div className="mb-2 h-12 w-12 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
-                      {/* Icon Placeholder */}
-                    </div>
-                    <h3 className="text-lg font-semibold">Project {item}</h3>
-                    <p className="text-sm text-gray-400">Short description of the project goes here.</p>
-                  </Card>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                  <Button variant="outline">View All Projects</Button>
-              </div>
+            <Section id="projects" title="Projects">
+              <BentoGrid />
             </Section>
 
             <Skills />

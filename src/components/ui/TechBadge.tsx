@@ -20,9 +20,14 @@ import {
   SiSpringboot,
   SiJira,
   SiSwift,
-  SiR
+  SiR,
+  SiSupabase,
+  SiFramer,
+  SiPostgresql,
+  SiDocker,
+  SiShadcnui
 } from "react-icons/si";
-import { TbComponents, TbSeo } from "react-icons/tb"; // Generic
+import { TbComponents, TbSeo, TbApi } from "react-icons/tb"; // Generic
 import { LuFileCode } from "react-icons/lu";
 
 interface TechConfig {
@@ -33,6 +38,7 @@ interface TechConfig {
 const techMap: Record<string, TechConfig> = {
   "React": { icon: FaReact, color: "text-blue-400" },
   "Next.js": { icon: SiNextdotjs, color: "text-white" },
+  "Next.js 14": { icon: SiNextdotjs, color: "text-white" },
   "TypeScript": { icon: SiTypescript, color: "text-blue-500" },
   "Tailwind CSS": { icon: SiTailwindcss, color: "text-cyan-400" },
   "Node.js": { icon: SiNodedotjs, color: "text-green-500" },
@@ -48,6 +54,16 @@ const techMap: Record<string, TechConfig> = {
   "Jira": { icon: SiJira, color: "text-blue-500" },
   "Swift": { icon: SiSwift, color: "text-orange-500" },
   "R": { icon: SiR, color: "text-blue-600" },
+  "Supabase": { icon: SiSupabase, color: "text-emerald-400" },
+  "PostgreSQL": { icon: SiPostgresql, color: "text-blue-400" },
+  "Framer Motion": { icon: SiFramer, color: "text-purple-500" },
+  "Spring Boot": { icon: SiSpringboot, color: "text-green-500" },
+  "Springboot": { icon: SiSpringboot, color: "text-green-500" },
+  "Docker": { icon: SiDocker, color: "text-blue-500" },
+  "shadcn": { icon: SiShadcnui, color: "text-white" },
+  "shadcn/ui": { icon: SiShadcnui, color: "text-white" },
+  "Aceternity UI": { icon: TbComponents, color: "text-cyan-500" },
+  "Cornell Roster API": { icon: TbApi, color: "text-red-500" },
   // Generic fallbacks or specific other tools
   "SEO": { icon: TbSeo, color: "text-green-400" },
   "CI/CD": { icon: SiVercel, color: "text-white" }, // Using Vercel icon for CI/CD context here or generic
@@ -58,9 +74,26 @@ const techMap: Record<string, TechConfig> = {
   "OOP": { icon: LuFileCode, color: "text-gray-400" },
 };
 
-export function TechBadge({ name }: { name: string }) {
+export function TechBadge({ name, mini = false }: { name: string; mini?: boolean }) {
   const config = techMap[name] || { icon: LuFileCode, color: "text-gray-400" };
   const Icon = config.icon;
+
+  if (mini) {
+    return (
+        <div
+            className={`
+            flex items-center justify-center w-8 h-8 rounded-full
+            bg-black/40 backdrop-blur-md border border-white/20 text-neutral-300
+            hover:bg-black/60 hover:border-white/40 hover:text-white
+            hover:scale-110 hover:shadow-[0_0_10px_-2px_rgba(255,255,255,0.1)]
+            transition-all group
+            `}
+            title={name}
+        >
+             <Icon className={`text-sm ${config.color} group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all`} />
+        </div>
+    );
+  }
 
   return (
     <span 
