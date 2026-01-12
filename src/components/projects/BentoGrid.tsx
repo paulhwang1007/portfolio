@@ -21,6 +21,9 @@ export const BentoGrid = () => {
             onClick={() => setSelectedId(project.id)}
           />
         ))}
+        <div className="md:col-span-4 md:row-span-1 rounded-3xl bg-white/5 border border-white/10 border-dashed flex items-center justify-center p-6 text-neutral-500 font-medium tracking-wider uppercase text-sm hover:bg-white/10 transition-colors cursor-default">
+          More work in progress...
+        </div>
       </div>
 
       <AnimatePresence>

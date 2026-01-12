@@ -37,7 +37,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         <motion.div
           layoutId={`card-${project.id}`}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="w-full max-w-3xl bg-neutral-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl pointer-events-auto relative flex flex-col max-h-[90vh]"
+          className="w-full max-w-4xl bg-neutral-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl pointer-events-auto relative flex flex-col max-h-[90vh]"
         >
              {/* Close Button */}
              <button 

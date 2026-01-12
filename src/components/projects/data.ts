@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     id: "perk",
     title: "Perk",
     category: "Full-Stack CRUD App",
-    shortDescription: "Optimize your credit card setup.",
+    shortDescription: "Organize your credit card portfolio to optimize points and cashback.",
     fullDescription: "A robust credit card management application designed to help users optimize their financial rewards. Perk allows users to track their credit card portfolio, compare benefits side-by-side, and manage card details including fees, bonuses, and opening dates. Built with a scalable Java Spring Boot backend and a modern React frontend using shadcn/ui.",
     techStack: ["React", "Tailwind CSS", "JavaScript", "shadcn/ui", "Java", "Spring Boot", "PostgreSQL", "Docker"],
     imageUrl: "/images/perk-dashboard.png",
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
        { label: "Frontend", url: "https://github.com/paulhwang1007/credit-card-tracker-frontend" },
        { label: "Backend", url: "https://github.com/paulhwang1007/credit-card-tracker" }
     ],
-    span: "md:col-span-2 md:row-span-1",
+    span: "md:col-span-2 md:row-span-2",
     features: [
         "Comprehensive card details & bonus tracking",
         "Side-by-side card comparison tool",
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
     liveLink: "https://cornell-roster.vercel.app/SP26",
     githubLink: "https://github.com/paulhwang1007/cornell-roster",
     featured: true,
-    span: "md:col-span-2 md:row-span-1",
+    span: "md:col-span-2 md:row-span-2",
     features: [
         "Search for courses by subject and semester",
         "Filter courses by 6+ categories",
@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     liveLink: "https://cusd.cornell.edu/pages/apply.html",
     githubLink: "https://github.com/paulhwang1007/cusd-website",
     featured: true,
-    span: "md:col-span-2 md:row-span-1",
+    span: "md:col-span-2 md:row-span-2",
     features: [
         "Pixel-perfect implementation from Figma",
         "Responsive vanilla Layout",
