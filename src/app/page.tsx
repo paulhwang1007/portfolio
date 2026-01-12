@@ -186,21 +186,7 @@ export default function Home() {
 
             <Skills />
 
-            <Section id="about" title="About Me">
-              <div className="grid gap-8 md:grid-cols-2">
-                <Card className="p-8">
-                  <p className="text-gray-300 leading-relaxed">
-                    [About Content Placeholder]
-                    <br />
-                    Passionate developer with a love for clean code and minimal design.
-                  </p>
-                </Card>
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-xl font-semibold">My Journey</h3>
-                  <p className="text-gray-400">Brief overview of your career path.</p>
-                </div>
-              </div>
-            </Section>
+
             
             <Section id="contact" title="Get In Touch">
                <Card className="max-w-xl mx-auto p-8 text-center">
