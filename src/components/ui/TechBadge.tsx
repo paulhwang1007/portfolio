@@ -27,7 +27,7 @@ import {
   SiDocker,
   SiShadcnui
 } from "react-icons/si";
-import { TbComponents, TbSeo } from "react-icons/tb"; // Generic
+import { TbComponents, TbSeo, TbApi } from "react-icons/tb"; // Generic
 import { LuFileCode } from "react-icons/lu";
 
 interface TechConfig {
@@ -62,6 +62,8 @@ const techMap: Record<string, TechConfig> = {
   "Docker": { icon: SiDocker, color: "text-blue-500" },
   "shadcn": { icon: SiShadcnui, color: "text-white" },
   "shadcn/ui": { icon: SiShadcnui, color: "text-white" },
+  "Aceternity UI": { icon: TbComponents, color: "text-cyan-500" },
+  "Cornell Roster API": { icon: TbApi, color: "text-red-500" },
   // Generic fallbacks or specific other tools
   "SEO": { icon: TbSeo, color: "text-green-400" },
   "CI/CD": { icon: SiVercel, color: "text-white" }, // Using Vercel icon for CI/CD context here or generic

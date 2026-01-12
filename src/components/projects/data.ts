@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
   {
     id: "perk",
     title: "Perk",
-    category: "Full-stack Web App",
+    category: "Full-Stack CRUD App",
     shortDescription: "Optimize your credit card setup.",
     fullDescription: "A robust credit card management application designed to help users optimize their financial rewards. Perk allows users to track their credit card portfolio, compare benefits side-by-side, and manage card details including fees, bonuses, and opening dates. Built with a scalable Java Spring Boot backend and a modern React frontend using shadcn/ui.",
     techStack: ["React", "Tailwind CSS", "JavaScript", "shadcn/ui", "Java", "Spring Boot", "PostgreSQL", "Docker"],
@@ -50,34 +50,29 @@ export const PROJECTS: Project[] = [
     gallery: ["/images/perk-dashboard.png", "/images/perk-compare.png", "/images/perk-add-card.png"]
   },
   {
-    id: "clearly",
-    title: "Clearly",
-    category: "Extension",
-    shortDescription: "Distraction-free reading mode.",
-    fullDescription: "A Chrome extension that declutters web pages for a focused reading experience. It removes ads, sidebars, and popups, leaving only the content that matters. Customizable themes and fonts make reading accessible for everyone.",
-    techStack: ["Javascript", "Chrome API", "HTML/CSS"],
-    imageUrl: "/images/clearly-mockup.png", // Placeholder
-    span: "md:col-span-1 md:row-span-1",
+    id: "cornell-roster",
+    title: "Cornell Roster",
+    category: "Web App",
+    shortDescription: "Browse Cornell classes in a more refined UI.",
+    fullDescription: "A minimal, responsive frontend web app that allows users to explore Cornell University courses by semester, using the official Cornell Roster API. It provides a seamless experience for students to find and track their courses.",
+    techStack: ["React", "Tailwind CSS", "HTML/CSS", "Cornell Roster API", "Aceternity UI", "Framer Motion"],
+    imageUrl: "/images/cornell-roster-landing.png", 
+    logoUrl: "/images/cornell-roster-logo.png",
+    liveLink: "https://cornell-roster.vercel.app/SP26",
+    githubLink: "https://github.com/paulhwang1007/cornell-roster",
+    featured: true,
+    span: "md:col-span-1 md:row-span-2",
     features: [
-        "One-click distraction removal",
-        "Dark mode and sepia themes",
-        "Dyslexia-friendly font options",
-        "Print-friendly export"
-    ]
-  },
-  {
-    id: "portfolio",
-    title: "Portfolio v1",
-    category: "Web",
-    shortDescription: "My previous portfolio site.",
-    fullDescription: "The first iteration of my personal portfolio, built with simple HTML/SCSS before migrating to the modern Next.js stack. Focused on brutalist design and fast load times.",
-    techStack: ["HTML", "SCSS", "Gulp"],
-    imageUrl: "/images/portfolio-v1.png", // Placeholder
-    span: "md:col-span-1 md:row-span-1",
-    features: [
-        "Zero Javascript dependency core",
-        "Custom GSAP animations",
-        "Scored 100/100 on Lighthouse"
+        "Search for courses by subject and semester",
+        "Filter courses by 6+ categories",
+        "Animated UI using Framer motion",
+        "Course details including 10+ fields"
+    ],
+    gallery: [
+        "/images/cornell-roster-landing.png", 
+        "/images/cornell-roster-subjects.png", 
+        "/images/cornell-roster-courses.png", 
+        "/images/cornell-roster-details.png"
     ]
   },
    {
