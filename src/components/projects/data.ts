@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
        { label: "Frontend", url: "https://github.com/paulhwang1007/credit-card-tracker-frontend" },
        { label: "Backend", url: "https://github.com/paulhwang1007/credit-card-tracker" }
     ],
-    span: "md:col-span-1 md:row-span-2",
+    span: "md:col-span-2 md:row-span-1",
     features: [
         "Comprehensive card details & bonus tracking",
         "Side-by-side card comparison tool",
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
     liveLink: "https://cornell-roster.vercel.app/SP26",
     githubLink: "https://github.com/paulhwang1007/cornell-roster",
     featured: true,
-    span: "md:col-span-1 md:row-span-2",
+    span: "md:col-span-2 md:row-span-1",
     features: [
         "Search for courses by subject and semester",
         "Filter courses by 6+ categories",
@@ -75,20 +75,29 @@ export const PROJECTS: Project[] = [
         "/images/cornell-roster-details.png"
     ]
   },
-   {
-    id: "shop-online",
-    title: "Shop Online",
-    category: "E-commerce",
-    shortDescription: "Full-stack e-commerce platform.",
-    fullDescription: "A feature-rich e-commerce platform with real-time inventory management, secure payments, and an admin dashboard.",
-    techStack: ["React", "Node.js", "MongoDB", "Stripe"],
-    imageUrl: "/images/shop-online.png", // Placeholder
+  {
+    id: "cusd-website",
+    title: "CUSD Website",
+    category: "Web App",
+    shortDescription: "Official Website for Cornell University Sustainable Design (2025-2026).",
+    fullDescription: "The official website for the project team Cornell University Sustainable Design constructed for 2025-2026 following a provided Figma design and restricted to vanilla HTML, CSS, and Javascript.",
+    techStack: ["HTML/CSS", "JavaScript", "Figma"],
+    imageUrl: "/images/cusd-landing.png",
+    logoUrl: "/images/cusd-logo.png",
+    liveLink: "https://cusd.cornell.edu/pages/apply.html",
+    githubLink: "https://github.com/paulhwang1007/cusd-website",
+    featured: true,
     span: "md:col-span-2 md:row-span-1",
     features: [
-        "Stripe payment integration",
-        "Real-time inventory via WebSockets",
-        "Admin dashboard with analytics charts",
-        "JWT-based persistent authentication"
+        "Pixel-perfect implementation from Figma",
+        "Responsive vanilla Layout",
+        "Custom timeline and project gallery components",
+        "Zero-dependency lightweight architecture"
+    ],
+    gallery: [
+        "/images/cusd-landing.png", 
+        "/images/cusd-projects.png", 
+        "/images/cusd-timeline.png"
     ]
   },
 ];
