@@ -35,6 +35,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
       <div className="fixed inset-0 flex items-center justify-center z-[101] pointer-events-none p-4 md:p-10">
         <motion.div
           layoutId={`card-${project.id}`}
+          transition={{ type: "spring", stiffness: 200, damping: 20 }}
           className="w-full max-w-3xl bg-neutral-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl pointer-events-auto relative flex flex-col max-h-[90vh]"
         >
              {/* Close Button */}
@@ -102,7 +103,12 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             </div>
 
             {/* Content Body */}
-            <div className="p-8 pt-4 overflow-y-auto">
+            <motion.div 
+                className="p-8 pt-4 overflow-y-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+            >
                 <motion.p 
                     layoutId={`desc-${project.id}`}
                     className="text-lg text-gray-300 mb-8 leading-relaxed"
@@ -111,7 +117,12 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 </motion.p>
                 
                 {project.features && (
-                    <div className="mb-8">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className="mb-8"
+                    >
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Key Features</h4>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             {project.features.map((feature, i) => (
@@ -121,16 +132,21 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 )}
 
                 {project.gallery && (
-                     <div className="mb-8">
-                        <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Media Gallery</h4>
+                     <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="mb-8"
+                     >
+                        <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Images</h4>
                          {/* Simple horizontal scroll for now */}
-                        <div className="flex gap-4 overflow-x-auto pb-4 snap-x">
+                        <div className="flex gap-4 overflow-x-auto pb-4 snap-x pl-1">
                             {project.gallery.map((img, i) => (
-                                <div key={i} className="shrink-0 w-64 h-40 md:w-80 md:h-48 rounded-xl overflow-hidden bg-neutral-800 border border-white/10 snap-center relative group">
+                                <div key={i} className="shrink-0 w-64 h-40 md:w-80 md:h-48 rounded-xl overflow-hidden bg-neutral-800 border border-white/10 snap-center relative group shadow-lg">
                                      <Image
                                          src={img}
                                          alt={`Gallery image ${i+1}`}
@@ -140,19 +156,23 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 </div>
                             ))}
                         </div>
-                     </div>
+                     </motion.div>
                 )}
             
-                 <div className="mb-8">
+                 <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="mb-8"
+                 >
                     <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Tech Stack</h4>
                     <div className="flex flex-wrap gap-2">
                         {project.techStack.map((tech) => (
                             <TechBadge key={tech} name={tech} />
                         ))}
                     </div>
-                </div>
-
-            </div>
+                </motion.div>
+            </motion.div>
         </motion.div>
       </div>
     </>,
