@@ -30,6 +30,15 @@ const socials = [
       </svg>
     ),
   },
+  {
+    name: "Resume",
+    href: "/paulhwang_resume.pdf",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="size-6">
+        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+      </svg>
+    ),
+  },
 ]
 
 export function SocialIcons() {
@@ -78,25 +87,25 @@ export function SocialIcons() {
 
             <span
               className={`relative z-10 transition-all duration-300 ease-out ${
-                hoveredIndex === index ? "text-white scale-110" : "text-neutral-500"
+                hoveredIndex === index ? "text-[#fbd9ae] scale-110" : "text-neutral-500"
               }`}
             >
               {social.icon}
             </span>
 
             <span
-              className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] rounded-full bg-white transition-all duration-300 ease-out ${
+              className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] rounded-full bg-[#fbd9ae] transition-all duration-300 ease-out ${
                 hoveredIndex === index ? "w-3 opacity-100" : "w-0 opacity-0"
               }`}
             />
 
             <span
-              className={`absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-lg bg-white text-neutral-950 text-[11px] font-medium whitespace-nowrap transition-all duration-300 ease-out ${
+              className={`absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-lg bg-[#fbd9ae] text-neutral-950 text-[11px] font-medium whitespace-nowrap transition-all duration-300 ease-out ${
                 hoveredIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none"
               }`}
             >
               {isEmail && copied ? "Copied!" : social.name}
-              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 size-2 rotate-45 bg-white" />
+              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 size-2 rotate-45 bg-[#fbd9ae]" />
             </span>
           </a>
         )

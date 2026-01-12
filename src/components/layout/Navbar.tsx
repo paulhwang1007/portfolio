@@ -38,13 +38,13 @@ export function Navbar() {
       transition={{ duration: 0.5 }}
       className="fixed top-6 left-0 right-0 z-50 flex justify-center py-4"
     >
-      <nav className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-4 py-1 backdrop-blur-md shadow-lg">
+      <nav className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-6 py-2 backdrop-blur-md shadow-lg">
         {navLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
             onClick={(e) => handleScroll(e, link.href)}
-            className="rounded-full px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+            className="rounded-full px-4 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-[#fbd9ae]"
           >
             {link.name}
           </Link>

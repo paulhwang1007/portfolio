@@ -200,16 +200,18 @@ export default function Home() {
 
 
             
-            <Section id="contact" title="Get In Touch">
+            <Section id="contact" title="Contact">
                <div className="grid gap-8 md:grid-cols-2">
-                 <Card className="p-8 flex flex-col justify-center">
+                 <Card className="p-8 flex flex-col justify-between">
                     <h3 className="text-2xl font-bold mb-4 text-white">Hi I&apos;m Paul 👋</h3>
-                    <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-4">
-                      Thank you for visiting my website! I&apos;m a full-stack developer and currently a 3rd-year student @ Cornell University. Building software for problem-solving is what fuels my desire to build and explore new tools.
-                    </p>
-                    <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                      I specialize in frontend work, but my experience and interest extends to backend and full-stack whether it be through collaboration or personal exploration.
-                    </p>
+                    <div>
+                      <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-4">
+                        Thank you for visiting my website! I&apos;m a full-stack developer and currently a 3rd-year student @ Cornell University. Building software for problem-solving is what fuels my desire to build and explore new tools.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+                        I specialize in frontend work, but my experience and interest extends to backend and full-stack whether it be through collaboration or personal exploration.
+                      </p>
+                    </div>
                  </Card>
 
                  <Card className="p-8 flex flex-col justify-center">
@@ -257,6 +259,15 @@ export default function Home() {
                              </svg>
                           </a>
                           <a href="https://www.linkedin.com/in/paul-kyojin-hwang/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors break-all">https://www.linkedin.com/in/paul-kyojin-hwang/</a>
+                       </div>
+                       
+                       <div className="flex items-center gap-3">
+                          <a href="/paulhwang_resume.pdf" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all shrink-0">
+                             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                             </svg>
+                          </a>
+                          <a href="/paulhwang_resume.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors break-all">Download Resume</a>
                        </div>
                     </div>
                  </Card>
