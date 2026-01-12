@@ -13,7 +13,7 @@ export const BentoGrid = () => {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[225px] gap-4">
         {PROJECTS.map((project) => (
           <ProjectCard
             key={project.id}

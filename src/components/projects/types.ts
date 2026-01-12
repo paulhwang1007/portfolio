@@ -10,4 +10,6 @@ export interface Project {
   githubLink?: string;
   featured?: boolean;
   span?: string; // e.g., "md:col-span-2 md:row-span-2"
+  gallery?: string[];
+  features?: string[];
 }
