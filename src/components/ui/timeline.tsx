@@ -26,14 +26,14 @@ const TimelineItem = ({ item }: { item: TimelineEntry }) => {
           <div
             className={`h-4 w-4 rounded-full border p-2 transition-all duration-300 ${
               isInView
-                ? "bg-purple-500 border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)] scale-110"
+                ? "bg-[#fbd9ae] border-[#fbd9ae] shadow-[0_0_15px_rgba(251,217,174,0.8)] scale-110"
                 : "bg-neutral-200 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700"
             }`}
           />
         </div>
         <h3
           className={`hidden md:block text-xl md:pl-20 md:text-5xl font-bold transition-colors duration-300 ${
-            isInView ? "text-purple-500" : "text-neutral-500 dark:text-neutral-500"
+            isInView ? "text-[#fbd9ae]" : "text-neutral-500 dark:text-neutral-500"
           }`}
         >
           {item.title}
@@ -43,7 +43,7 @@ const TimelineItem = ({ item }: { item: TimelineEntry }) => {
       <div className="relative pl-20 pr-4 md:pl-32 w-full md:col-span-4">
         <h3
           className={`md:hidden block text-2xl mb-4 text-left font-bold transition-colors duration-300 ${
-            isInView ? "text-purple-500" : "text-neutral-500 dark:text-neutral-500"
+            isInView ? "text-[#fbd9ae]" : "text-neutral-500 dark:text-neutral-500"
           }`}
         >
           {item.title}
@@ -90,7 +90,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-[#fbd9ae] via-[#8c775b] to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

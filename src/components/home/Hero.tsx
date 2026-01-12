@@ -30,11 +30,11 @@ export function Hero() {
           transition={{ delay: 1, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
         >
-          <span className="text-sm text-gray-400 font-light tracking-widest uppercase">Scroll to learn more</span>
+          <span className="text-sm text-[#fbd9ae] font-light tracking-widest uppercase">Scroll to learn more</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="cursor-pointer text-gray-500 hover:text-white transition-colors"
+            className="cursor-pointer text-[#fbd9ae] hover:text-white transition-colors"
             onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth'})}
           >
             <svg 

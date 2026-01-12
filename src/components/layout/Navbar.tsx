@@ -44,7 +44,7 @@ export function Navbar() {
             key={link.name}
             href={link.href}
             onClick={(e) => handleScroll(e, link.href)}
-            className="rounded-full px-4 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+            className="rounded-full px-4 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-[#fbd9ae]"
           >
             {link.name}
           </Link>

@@ -202,14 +202,16 @@ export default function Home() {
             
             <Section id="contact" title="Contact">
                <div className="grid gap-8 md:grid-cols-2">
-                 <Card className="p-8 flex flex-col justify-center">
+                 <Card className="p-8 flex flex-col justify-between">
                     <h3 className="text-2xl font-bold mb-4 text-white">Hi I&apos;m Paul 👋</h3>
-                    <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-4">
-                      Thank you for visiting my website! I&apos;m a full-stack developer and currently a 3rd-year student @ Cornell University. Building software for problem-solving is what fuels my desire to build and explore new tools.
-                    </p>
-                    <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                      I specialize in frontend work, but my experience and interest extends to backend and full-stack whether it be through collaboration or personal exploration.
-                    </p>
+                    <div>
+                      <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-4">
+                        Thank you for visiting my website! I&apos;m a full-stack developer and currently a 3rd-year student @ Cornell University. Building software for problem-solving is what fuels my desire to build and explore new tools.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+                        I specialize in frontend work, but my experience and interest extends to backend and full-stack whether it be through collaboration or personal exploration.
+                      </p>
+                    </div>
                  </Card>
 
                  <Card className="p-8 flex flex-col justify-center">
