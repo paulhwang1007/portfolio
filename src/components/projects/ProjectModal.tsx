@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Project } from "./types";
 import { X, ExternalLink, Github } from "lucide-react";
 import { createPortal } from "react-dom";
@@ -15,6 +15,7 @@ interface ProjectModalProps {
 
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     const [mounted, setMounted] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     useEffect(() => {
         setMounted(true);
@@ -170,12 +171,16 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                          {/* Simple horizontal scroll for now */}
                         <div className="flex gap-4 overflow-x-auto pb-4 snap-x pl-1">
                             {project.gallery.map((img, i) => (
-                                <div key={i} className="shrink-0 w-64 h-40 md:w-80 md:h-48 rounded-xl overflow-hidden bg-neutral-800 border border-white/10 snap-center relative group shadow-lg">
+                                <div 
+                                    key={i} 
+                                    onClick={() => setSelectedImage(img)}
+                                    className="shrink-0 w-64 h-40 md:w-80 md:h-48 rounded-xl overflow-hidden bg-neutral-800 border border-white/10 snap-center relative group shadow-lg cursor-zoom-in"
+                                >
                                      <Image
                                          src={img}
                                          alt={`Gallery image ${i+1}`}
                                          fill
-                                         className="object-cover"
+                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                      />
                                 </div>
                             ))}
@@ -199,6 +204,35 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             </motion.div>
         </motion.div>
       </div>
+
+      {/* Lightbox Overlay */}
+      <AnimatePresence>
+        {selectedImage && (
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedImage(null)}
+                className="fixed inset-0 z-[110] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+            >
+                <div className="relative w-full h-full max-w-7xl max-h-[90vh]">
+                     <Image
+                        src={selectedImage}
+                        alt="Project screenshot"
+                        fill
+                        className="object-contain"
+                        quality={100}
+                     />
+                </div>
+                 <button 
+                    onClick={() => setSelectedImage(null)}
+                    className="absolute top-4 right-4 p-3 bg-white/10 text-white rounded-full hover:bg-white/20 transition-colors z-[120]"
+                >
+                    <X size={24} />
+                </button>
+            </motion.div>
+        )}
+      </AnimatePresence>
     </>,
     document.body
   );
