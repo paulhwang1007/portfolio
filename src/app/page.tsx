@@ -36,6 +36,18 @@ const GAME_FRAMES = [
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const handleCopyEmail = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText("hwpaul1007@gmail.com");
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy email", err);
+    }
+  };
 
   // Auto-dismiss loader after a set time or use onComplete if it was finite
   useEffect(() => {
@@ -210,7 +222,16 @@ export default function Home() {
                           <div className="p-2 rounded-lg bg-white/5 border border-white/10 shrink-0">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-400"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                           </div>
-                          <a href="mailto:hwpaul1007@gmail.com" className="text-gray-300 hover:text-white transition-colors break-all">hwpaul1007@gmail.com</a>
+                          <a 
+                            href="mailto:hwpaul1007@gmail.com" 
+                            onClick={handleCopyEmail}
+                            className="text-gray-300 hover:text-white transition-colors break-all cursor-pointer flex items-center gap-2 group"
+                          >
+                            hwpaul1007@gmail.com
+                            <span className={`text-xs bg-white text-black px-2 py-0.5 rounded opacity-0 transition-opacity ${copiedEmail ? 'opacity-100' : 'group-hover:opacity-100'}`}>
+                              {copiedEmail ? 'Copied!' : 'Copy'}
+                            </span>
+                          </a>
                        </div>
 
                        <div className="flex items-center gap-3">
