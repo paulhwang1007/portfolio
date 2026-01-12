@@ -200,7 +200,7 @@ export default function Home() {
 
 
             
-            <Section id="contact" title="Get In Touch">
+            <Section id="contact" title="Contact">
                <div className="grid gap-8 md:grid-cols-2">
                  <Card className="p-8 flex flex-col justify-center">
                     <h3 className="text-2xl font-bold mb-4 text-white">Hi I&apos;m Paul 👋</h3>

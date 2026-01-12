@@ -35,8 +35,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
       />
       <div className="fixed inset-0 flex items-center justify-center z-[101] pointer-events-none p-4 md:p-10">
         <motion.div
-          layoutId={`card-${project.id}`}
-          transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 20 }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
           className="w-full max-w-4xl bg-neutral-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl pointer-events-auto relative flex flex-col max-h-[90vh]"
         >
              {/* Close Button */}
@@ -59,7 +61,9 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                  
                  <div className="absolute bottom-0 left-0 p-8 z-20">
                      <motion.p 
-                        layoutId={`category-${project.id}`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
                         className="text-sm font-medium text-blue-400 mb-2 uppercase tracking-wider"
                     >
                         {project.category}
@@ -76,7 +80,9 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                              </div>
                         )}
                         <motion.h3 
-                            layoutId={`title-${project.id}`}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.2 }}
                             className="text-4xl md:text-5xl font-bold text-white"
                         >
                         {project.title}
@@ -84,7 +90,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </div>
 
                     <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                         className="flex flex-wrap gap-3"
@@ -135,7 +141,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 transition={{ delay: 0.2, duration: 0.4 }}
             >
                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     className="mb-6"
@@ -148,7 +154,9 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 </motion.div>
 
                 <motion.p 
-                    layoutId={`desc-${project.id}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
                     className="text-lg text-gray-300 mb-8 leading-relaxed"
                 >
                     {project.fullDescription}
@@ -156,7 +164,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 
                 {project.features && (
                     <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                         className="mb-8"
@@ -175,7 +183,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
                 {project.gallery && (
                      <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                         className="mb-8"

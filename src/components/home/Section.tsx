@@ -12,7 +12,7 @@ interface SectionProps extends HTMLMotionProps<"section"> {
 
 export function Section({ id, title, children, className = "", width = "max-w-5xl", ...props }: SectionProps) {
   return (
-    <motion.section id={id} className={`min-h-screen py-24 px-4 flex flex-col items-center justify-center ${className}`} {...props}>
+    <motion.section id={id} className={`py-16 px-4 flex flex-col items-center justify-center ${className}`} {...props}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
