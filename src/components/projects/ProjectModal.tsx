@@ -134,6 +134,19 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
             >
+                 <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="mb-6"
+                 >
+                    <div className="flex flex-wrap gap-2">
+                        {project.techStack.map((tech) => (
+                            <TechBadge key={tech} name={tech} />
+                        ))}
+                    </div>
+                </motion.div>
+
                 <motion.p 
                     layoutId={`desc-${project.id}`}
                     className="text-lg text-gray-300 mb-8 leading-relaxed"
@@ -188,21 +201,8 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                      </motion.div>
                 )}
             
-                 <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                    className="mb-8"
-                 >
-                    <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Tech Stack</h4>
-                    <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech) => (
-                            <TechBadge key={tech} name={tech} />
-                        ))}
-                    </div>
                 </motion.div>
             </motion.div>
-        </motion.div>
       </div>
 
       {/* Lightbox Overlay */}

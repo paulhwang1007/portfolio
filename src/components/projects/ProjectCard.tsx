@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Project } from "./types";
 import { cn } from "@/lib/utils";
 
+import { TechBadge } from "@/components/ui/TechBadge";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -35,17 +36,16 @@ export const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       </div>
 
       <div className="relative z-20 h-full p-6 flex flex-col justify-end">
-        {project.logoUrl && (
-            <div className="absolute top-6 left-6 w-12 h-12 rounded-xl bg-black/20 backdrop-blur-md border border-white/10 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                 <Image 
-                    src={project.logoUrl}
-                    alt={`${project.title} logo`}
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-contain"
-                 />
+
+
+        {/* Tech Stack Floating - Top Right */}
+        <div className="absolute top-6 right-6 z-30 flex flex-col items-end gap-2">
+            <div className="flex flex-wrap justify-end gap-1.5 max-w-[200px]">
+               {project.techStack.map((tech) => (
+                   <TechBadge key={tech} name={tech} mini />
+               ))}
             </div>
-        )}
+        </div>
 
         <motion.p 
             layoutId={`category-${project.id}`}
@@ -61,7 +61,7 @@ export const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
         </motion.h3>
         <motion.p 
             layoutId={`desc-${project.id}`}
-            className="text-gray-300 text-sm line-clamp-2"
+            className="text-gray-300 text-sm line-clamp-2 mb-4"
         >
           {project.shortDescription}
         </motion.p>

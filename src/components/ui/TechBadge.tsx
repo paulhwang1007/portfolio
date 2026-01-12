@@ -72,9 +72,26 @@ const techMap: Record<string, TechConfig> = {
   "OOP": { icon: LuFileCode, color: "text-gray-400" },
 };
 
-export function TechBadge({ name }: { name: string }) {
+export function TechBadge({ name, mini = false }: { name: string; mini?: boolean }) {
   const config = techMap[name] || { icon: LuFileCode, color: "text-gray-400" };
   const Icon = config.icon;
+
+  if (mini) {
+    return (
+        <div
+            className={`
+            flex items-center justify-center w-8 h-8 rounded-full
+            bg-black/40 backdrop-blur-md border border-white/20 text-neutral-300
+            hover:bg-black/60 hover:border-white/40 hover:text-white
+            hover:scale-110 hover:shadow-[0_0_10px_-2px_rgba(255,255,255,0.1)]
+            transition-all group
+            `}
+            title={name}
+        >
+             <Icon className={`text-sm ${config.color} group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all`} />
+        </div>
+    );
+  }
 
   return (
     <span 
