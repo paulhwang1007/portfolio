@@ -111,6 +111,9 @@ export default function Home() {
                           skills={[
                             "Multi-Agent Systems",
                             "MCP",
+                            "CUGA",
+                            "AI-Assisted Development",
+                            "Python",
                             "Playwright",
                             "AWS",
                             "API Integration",
@@ -169,44 +172,21 @@ export default function Home() {
                         >
                           <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                             <li className="pl-1">
-                              Developed 15+ reusable React components and
-                              integrated APIs through component-driven
-                              architecture, reducing development time by 30% and
-                              enforcing UI consistency.
+                              Architected 15+ reusable React components and
+                              structured state-management patterns, reducing
+                              development time 33% across feature development.
                             </li>
                             <li className="pl-1">
-                              Optimized application performance by refactoring
-                              legacy code and applying React best practices,
-                              improving load speed by 40% for thousands of
-                              active users.
+                              Integrated 20+ backend APIs with cross-functional
+                              teams, implementing data validation and error
+                              handling that contributed to a 27% increase in
+                              user engagement.
                             </li>
-                          </ul>
-                        </ExperienceItem>
-
-                        <ExperienceItem
-                          logo="/images/cusd-logo.png"
-                          logoAlt="Cornell University Sustainable Design"
-                          title="Frontend Web Developer"
-                          company="Cornell University Sustainable Design"
-                          startPeriod="January 2025 - present"
-                          location="Ithaca, NY"
-                          skills={["HTML/CSS", "Javascript", "Figma"]}
-                        >
-                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                             <li className="pl-1">
-                              Implemented and deployed the project team’s
-                              responsive website from scratch using HTML, CSS,
-                              and JavaScript for 1000+ monthly visitors (
-                              <a
-                                href="https://cusd.cornell.edu/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-400 hover:underline"
-                              >
-                                https://cusd.cornell.edu/
-                              </a>
-                              ), improving public visibility and access to team
-                              information.
+                              Led systematic peer code reviews and refactored
+                              legacy code, improving page load speed 44% for
+                              thousands of active users while maintaining safe
+                              deployment practices in a production codebase.
                             </li>
                           </ul>
                         </ExperienceItem>
@@ -220,7 +200,7 @@ export default function Home() {
                         <ExperienceItem
                           logo="/images/pideltapsi-logo.jpg"
                           logoAlt="Pi Delta Psi Incorporated"
-                          title="Frontend Web Developer"
+                          title="Vice President & Web Developer"
                           company="Pi Delta Psi Fraternity Inc."
                           startPeriod="October 2024 - present"
                           location="Ithaca, NY"
@@ -234,15 +214,49 @@ export default function Home() {
                         >
                           <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                             <li className="pl-1">
-                              Developed and maintained a React.js
-                              production-quality web platform, deploying on
-                              Vercel with CI/CD pipelines to ensure reliable
-                              content updates and a consistent user experience.
+                              Maintained a React.js production-quality web
+                              platform, measured by 250+ monthly visitors and a
+                              60% increase in online engagement, deploying on
+                              Vercel with CI/CD pipelines for reliable updates
+                              and consistent user experience.
                             </li>
                             <li className="pl-1">
-                              Optimized site performance and SEO by implementing
-                              Next.js best practices for load speed, indexing,
-                              and scalability.
+                              Optimized site performance and SEO, as measured by
+                              a 60% increase in traffic, by implementing Next.js
+                              best practices for load speed, indexing, and
+                              scalability.
+                            </li>
+                            <li className="pl-1">
+                              Oversaw chapter logistics and 10+ board positions,
+                              as measured by strengthened Asian American campus
+                              presence, by directing community service,
+                              cultural, and social programming for 50+ members.
+                            </li>
+                          </ul>
+                        </ExperienceItem>
+
+                        <ExperienceItem
+                          logo="/images/cusd-logo.png"
+                          logoAlt="Cornell University Sustainable Design"
+                          title="Tech Lead & Web Developer"
+                          company="Cornell University Sustainable Design"
+                          startPeriod="September 2024 - present"
+                          location="Ithaca, NY"
+                          skills={["HTML/CSS", "Javascript", "Figma"]}
+                        >
+                          <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
+                            <li className="pl-1">
+                              Designed and deployed a responsive website from
+                              scratch, growing traffic to 1,000+ monthly
+                              visitors and boosting public visibility 50%.
+                            </li>
+                            <li className="pl-1">
+                              Directed technical strategy and oversight for the
+                              organization&apos;s web presence, as measured by
+                              accurate representation of all 11 subteams&apos;
+                              work, by managing site architecture and content to
+                              communicate CUSD&apos;s sustainability initiatives
+                              and impact to the broader community.
                             </li>
                           </ul>
                         </ExperienceItem>
@@ -277,10 +291,11 @@ export default function Home() {
                           <ul className="list-disc pl-5 space-y-3 text-neutral-300 text-base md:text-lg leading-relaxed">
                             <li className="pl-1">
                               Object-Oriented Programming, Data Structures,
-                              Discrete Structures, Networks, Java, R, Python,
-                              Web Development, iOS Development, Linear Algebra,
-                              Multivariable Calculus, Differential Equations,
-                              Probability & Statistics
+                              Algorithms, Discrete Structures, Networks, Java,
+                              R, Python, Machine Learning, Web Development, iOS
+                              Development, Linear Algebra, Multivariable
+                              Calculus, Differential Equations, Probability &
+                              Statistics
                             </li>
                           </ul>
                         </ExperienceItem>
@@ -305,23 +320,26 @@ export default function Home() {
                   </h3>
                   <div>
                     <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-4">
-                      Thank you for visiting my website! I&apos;m a full-stack
-                      developer and currently a 4th-year student @ Cornell
-                      University. Building software for problem-solving is what
-                      fuels my desire to build and explore new tools.
+                      I'm a software developer and a 4th-year student at Cornell
+                      University.
                     </p>
                     <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                      I specialize in frontend work, but my experience and
-                      interest extends to backend and full-stack whether it be
-                      through collaboration or personal exploration.
+                      I recently interned at IBM watsonX Orchestrate as a
+                      Software Developer. There, I built multi-agent system
+                      integrations and independently diagnosed and pitched a fix
+                      for a production RAG issue affecting multiple live
+                      clients. Prior, I interned at a startup where I did
+                      full-stack work on an e-commerce platform. Outside of
+                      internships, I lead as Tech Lead for Cornell Sustainable
+                      Design and VP of Pi Delta Psi.
                     </p>
                   </div>
                 </Card>
 
                 <Card className="p-8 flex flex-col justify-center">
                   <p className="text-gray-300 mb-6 font-medium text-lg">
-                    Thanks for stopping by — feel free to reach out if
-                    you&apos;d like to connect or collaborate!
+                    Thanks for visiting! Feel free to reach out to me with any
+                    of the following information.
                   </p>
 
                   <div className="space-y-4">
@@ -431,7 +449,7 @@ export default function Home() {
 
                     <div className="flex items-center gap-3">
                       <a
-                        href="/paulhwang_resume.pdf"
+                        href="/Paul_Hwang_Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all shrink-0"
@@ -446,7 +464,7 @@ export default function Home() {
                         </svg>
                       </a>
                       <a
-                        href="/paulhwang_resume.pdf"
+                        href="/Paul_Hwang_Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-300 hover:text-white transition-colors break-all"
