@@ -40,7 +40,7 @@ const TimelineItem = ({ item }: { item: TimelineEntry }) => {
         </h3>
       </div>
 
-      <div className="relative pl-20 pr-4 md:pl-32 w-full md:col-span-4">
+      <div className="relative pl-16 pr-4 sm:pl-20 md:pl-32 w-full md:col-span-4">
         <h3
           className={`md:hidden block text-2xl mb-4 text-left font-bold transition-colors duration-300 ${
             isInView ? "text-[#fbd9ae]" : "text-neutral-500 dark:text-neutral-500"

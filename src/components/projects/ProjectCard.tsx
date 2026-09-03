@@ -39,7 +39,7 @@ export const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
 
         {/* Tech Stack Floating - Top Right */}
         <div className="absolute top-6 right-6 z-30 flex flex-col items-end gap-2">
-            <div className="flex flex-wrap justify-end gap-1.5 max-w-[200px]">
+            <div className="flex flex-wrap justify-end gap-1.5 max-w-[150px] sm:max-w-[200px]">
                {project.techStack.map((tech) => (
                    <TechBadge key={tech} name={tech} mini />
                ))}
@@ -51,8 +51,8 @@ export const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
         >
             {project.category}
         </motion.p>
-        <motion.h3 
-            className="text-2xl font-bold text-white mb-2"
+        <motion.h3
+            className="text-xl sm:text-2xl font-bold text-white mb-2"
         >
           {project.title}
         </motion.h3>
