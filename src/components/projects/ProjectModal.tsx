@@ -50,7 +50,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             </button>
 
             {/* Header / Image Area */}
-            <div className="relative h-64 md:h-80 w-full shrink-0">
+            <div className="relative h-48 sm:h-64 md:h-80 w-full shrink-0">
                  <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -59,7 +59,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent z-10" />
                  
-                 <div className="absolute bottom-0 left-0 p-8 z-20">
+                 <div className="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8 z-20">
                      <motion.p 
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -79,11 +79,11 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                  />
                              </div>
                         )}
-                        <motion.h3 
+                        <motion.h3
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="text-4xl md:text-5xl font-bold text-white"
+                            className="text-2xl sm:text-3xl md:text-5xl font-bold text-white break-words"
                         >
                         {project.title}
                         </motion.h3>
@@ -134,8 +134,8 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             </div>
 
             {/* Content Body */}
-            <motion.div 
-                className="p-8 pt-4 overflow-y-auto"
+            <motion.div
+                className="p-4 sm:p-6 md:p-8 pt-4 overflow-y-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
@@ -157,7 +157,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="text-lg text-gray-300 mb-8 leading-relaxed"
+                    className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed"
                 >
                     {project.fullDescription}
                 </motion.p>

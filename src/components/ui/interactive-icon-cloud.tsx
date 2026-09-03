@@ -128,7 +128,7 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex w-full max-w-full flex-col items-center justify-center overflow-hidden">
         <style jsx global>{`
             /* Hide the original library tooltip purely visually */
             .icon-cloud-tooltip {

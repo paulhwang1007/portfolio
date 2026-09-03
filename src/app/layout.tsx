@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google"; // Using Inter as a standard modern font
 import { ThemeProvider } from "@/components/theme-provider";
 import { DottedSurface } from "@/components/ui/dotted-surface";
@@ -13,6 +13,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Paul Hwang | Developer Portfolio",
   description: "Personal portfolio of Paul Hwang, a standard developer.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
